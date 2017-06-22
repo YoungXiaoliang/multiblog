@@ -1,0 +1,268 @@
+{{#section 'user-page-css'}}
+    <link rel="stylesheet" href="/stylesheets/info.css">
+    <link rel="stylesheet" href="/stylesheets/userPage.css">
+{{/section}}
+
+<section class="userPage" ng-controller="userPageController as ctrl">
+    <section class="userMess">
+        <!--用户基本信息-->
+        <div class="user-information">
+            <div class="edit-btn pop-up" ng-click="ctrl.getLoginMess()" >编辑</div>
+            <div class="user-picture fl">
+                <div class="user-page-img">
+                    <img ng-src="\{{ctrl.loginUser.picture}}">
+                </div>
+                <button>上传头像</button>
+            </div>
+            <div class="user-page-mess fl">
+                <h3 class="user-page-name">\{{ctrl.loginUser.username}}</h3>
+                <p>真实姓名：\{{ctrl.loginUser.realName}}</p>
+                <p>Email：\{{ctrl.loginUser.useremail}}</p>
+                <p>年龄：\{{ctrl.loginUser.age}}</p>
+                <p>性别：\{{ctrl.loginUser.gender}}</p>
+                <p>电话：\{{ctrl.loginUser.phone}}</p>
+                <p>职位：\{{ctrl.loginUser.job}}</p>
+                <p>地址：\{{ctrl.loginUser.address}}</p>
+                <p>个人简介：\{{ctrl.loginUser.brief}}</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!--用户动态信息-->
+        <div class="user-dynamic">
+            <div class="user-page-btn-list">
+                <button class="activeBtn" ng-click="ctrl.currentTab = 'default'">发布</button>
+                <button ng-click="ctrl.currentTab = 'follows'">关注</button>
+                <button ng-click="ctrl.currentTab = 'fans'">粉丝</button>
+                <button ng-click="ctrl.currentTab = 'keeps'">收藏</button>
+            </div>
+            <div class="user-page-content" ng-switch="ctrl.currentTab">
+                <div class="user-page-myPublish" ng-switch--default>
+                    <h3>我的发布</h3>
+                    <div class="myPublish-list" ng-repeat="loginArticle in ctrl.loginUserArticles">
+                        <div class="myPublish-top">
+                            <a href="/oneArticle?articleAddr=\{{loginArticle._id}}" target="_blank">\{{loginArticle.articleTitle}}</a>
+                            <p>\{{loginArticle.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}} &nbsp;&nbsp;&nbsp;<span style="color: #00a5ff">\{{loginArticle.whoSee}}</span></p>
+                        </div>
+                        <div class="myPublish-content">
+                            <div ng-bind-html="loginArticle.articleContent | trustHtml"></div>
+                        </div>
+                        <div class="myPublish-opera">
+                            <a href="javascript:;" class="edit-article" title="编辑" ng-click="ctrl.getEditArticle(loginArticle._id)">编辑</a>
+                            <a href="javascript:;" class="del-article" title="删除" ng-click="ctrl.delArticleAlert(loginArticle._id,loginArticle.articleTitle)">删除</a>
+                        </div>
+                        <div class="articleType">\{{loginArticle.articleType}}</div>
+                    </div>
+                </div>
+                <div class="user-page-myFollows" ng-switch-when="follows">
+                    <h3>我的关注</h3>
+                    <div class="myFollow-list" ng-repeat="myfollows in ctrl.myFollows">
+                        <div class="follw-img fl">
+                            <img ng-src="\{{myfollows.picture}}">
+                        </div>
+                        <div class="follw-mes fl">
+                            <a href="/otherUserPage?otherUser=\{{myfollows.username}}" class="othername">\{{myfollows.username}}</a>
+                            <p>性别：<span>\{{myfollows.gender}}</span></p>
+                            <p>年龄：<span>\{{myfollows.age}}</span></p>
+                            <p>职业：<span>\{{myfollows.job}}</span></p>
+                            <p>个人简介：<span>\{{myfollows.brief}}</span></p>
+                        </div>
+                        <div class="clear"></div>
+                        <p class="cancleFollow"><a href="javascript:;" ng-click="ctrl.cancleFollow(myfollows.username)" >取消关注</a></p>
+                    </div>
+                </div>
+                <div class="user-page-myFans" ng-switch-when="fans">
+                    <h3>我的粉丝</h3>
+                    <div class="myFans-list" ng-repeat="fans in ctrl.myFans">
+                        <div class="fans-img fl">
+                            <img ng-src="\{{fans.picture}}">
+                        </div>
+                        <div class="fans-mes fl">
+                            <a href="/otherUserPage?otherUser=\{{fans.username}}" class="othername">\{{fans.username}}</a>
+                            <p>性别：<span>\{{fans.gender}}</span></p>
+                            <p>职业：<span>\{{fans.job}}</span></p>
+                            <p>个人简介：<span>\{{fans.brief}}</span></p>
+                            <p></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="user-page-myKeeps" ng-switch-when="keeps">
+                    <h3>我的收藏</h3>
+                    <div class="info-list" ng-repeat="myKeeps in ctrl.myKeeps" ng-init="outindex = $index">
+                        <div class="user-mess fl">
+                            <a id="user-pic" href="/otherUserPage?otherUser=\{{myKeeps.articleAuthor}}" target="_blank">
+                                <img ng-src="\{{ctrl.keepAuthorPics[0]}}">
+                            </a>
+                            <p>\{{myKeeps.articleAuthor}}</p>
+                        </div>
+                        <div class="info-body fr">
+                            <div class="info-top">
+                                <a href="/oneArticle?articleAddr=\{{myKeeps._id}}" target="_blank">\{{myKeeps.articleTitle}}</a>
+                                <p>\{{ myKeeps.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}}</p>
+                            </div>
+                            <div class="info-content">
+                                <div  ng-bind-html="myKeeps.articleContent | trustHtml"></div>
+                            </div>
+                            <div class="info-opera">
+                                <a class="cancelKeep pop-up"  href="javascript:;" ng-click="ctrl.cancelKeep(myKeeps._id,myKeeps.articleTitle)">取消收藏</a>
+                            </div>
+                            <div class="left-icon"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="articleType">\{{myKeeps.articleType}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----------------------弹出窗口--------------------------------------->
+    <!---编辑个人信息--->
+    <div class="editMess-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close cancel"><span aria-hidden="true">&times;</span></button>
+            <h2>用户信息</h2>
+            <form name="editMessForm" class="editMessForm">
+                <div>
+                    <label>真实姓名：</label>
+                    <input type="text" ng-model="ctrl.login.realName" name="realName">
+                </div>
+                <div>
+                    <label>邮箱：</label>
+                    <input type="email" ng-model="ctrl.login.useremail" required>
+                </div>
+                <div>
+                    <label>年龄：</label>
+                    <input type="text" ng-model="ctrl.login.age">
+                </div>
+                <div>
+                    <label>性别：</label>
+                    <input type="radio" name="gender" ng-model="ctrl.login.gender" value="男"><span class="gender" >男</span>
+                    <input type="radio" name="gender" ng-model="ctrl.login.gender" value="女"><span class="gender" >女</span>
+                </div>
+                <div>
+                    <label>地址：</label>
+                    <input type="text" ng-model="ctrl.login.address">
+                </div>
+                <div>
+                    <label>电话：</label>
+                    <input type="text" ng-model="ctrl.login.phone">
+                </div>
+                <div>
+                    <label>工作：</label>
+                    <input type="text" ng-model="ctrl.login.job">
+                </div>
+                <div class="brief">
+                    <label>个人简介：</label>
+                    <textarea ng-model="ctrl.login.brief"></textarea>
+                </div>
+                <div class="opear">
+                    <button class="btn btn-default cancel">取消</button>
+                    <button class="btn btn-primary" ng-disabled="editMessForm.$invalid" ng-click="ctrl.edit()">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!---上传头像--->
+    <div class="upload-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close cancelUpload"><span aria-hidden="true">&times;</span></button>
+            <h2>上传头像</h2>
+            <form enctype="multipart/form-data" method="post" action="\{{'/photo/'+ ctrl.year +'/'+ctrl.month+'/'+ctrl.timestr}}">
+                <div class="uploadBody">
+                    <img id="img-show" ng-src="\{{ctrl.loginUser.picture}}">
+                        <a href="javascript:;">选择文件
+                            <input type="file" class="file" name="photo" required>
+                        </a>
+                </div>
+                <div class="opear">
+                    <button class="btn btn-default cancelUpload">取消</button>
+                    <button type="submit" class="btn btn-primary">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!---编辑文章信息--->
+    <div class="editArticle-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close cancelArticle"><span aria-hidden="true">&times;</span></button>
+            <h2>文章信息</h2>
+            <form name="editArticleForm" class="editArticleForm">
+                <div>
+                    <label>文章标题：</label>
+                    <input type="text" ng-model="ctrl.editArticle.articleTitle" name="articleTitle">
+                </div>
+                <div>
+                    <label>文章类型：</label>
+                    <input type="radio" name="articleType" ng-model="ctrl.editArticle.articleType" value="文章"><span class="type" >文章</span>
+                    <input type="radio" name="articleType" ng-model="ctrl.editArticle.articleType" value="技术"><span class="type" >技术</span>
+                    <input type="radio" name="articleType" ng-model="ctrl.editArticle.articleType" value="问答"><span class="type" >问答</span>
+                    <input type="radio" name="articleType" ng-model="ctrl.editArticle.articleType" value="随记"><span class="type" >随记</span>
+                </div>
+                <div class="articleContent">
+                    <label>文章内容：</label>
+                    <textarea ng-model="ctrl.editArticle.articleContent"></textarea>
+                </div>
+                <div>
+                    <label>可见人群：</label>
+                    <input type="radio" name="whoSee" ng-model="ctrl.editArticle.whoSee" value="公开"><span class="whosee" >公开</span>
+                    <input type="radio" name="whoSee" ng-model="ctrl.editArticle.whoSee" value="关注可见"><span class="whosee" >关注可见</span>
+                    <input type="radio" name="whoSee" ng-model="ctrl.editArticle.whoSee" value="自己可见"><span class="whosee" >自己可见</span>
+                </div>
+                <div class="opear">
+                    <button class="btn btn-default cancelArticle">取消</button>
+                    <button class="btn btn-primary" ng-disabled="editArticleForm.$invalid" ng-click="ctrl.doEditArticle()">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-------删除文章------>
+    <div class="delArticle-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close canceldelArticle"><span aria-hidden="true">&times;</span></button>
+            <h2>删除文章</h2>
+            <div class="delArticle-body">
+                <h2>确定删除文章：《\{{ctrl.delArticleTitle}}》？</h2>
+            </div>
+            <div class="opear">
+                <button class="btn btn-default canceldelArticle">取消</button>
+                <button class="btn btn-primary" ng-click="ctrl.delArticle(ctrl.delArticleId)">确定</button>
+            </div>
+        </div>
+    </div>
+    <!-------取消关注------>
+    <div class="calcelFollow-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close cancelCancelFollow"><span aria-hidden="true">&times;</span></button>
+            <h2>取消关注</h2>
+            <div class="delArticle-body">
+                <h2>确定取消关注：《\{{ctrl.cancelFollowName}}》？</h2>
+            </div>
+            <div class="opear">
+                <button class="btn btn-default cancelCancelFollow">取消</button>
+                <button class="btn btn-primary" ng-click="ctrl.docancleFollow(ctrl.cancelFollowName)">确定</button>
+            </div>
+        </div>
+    </div>
+    <!-------取消收藏------>
+    <div class="calcelKeep-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close cancelKeep"><span aria-hidden="true">&times;</span></button>
+            <h2>取消收藏</h2>
+            <div class="delArticle-body">
+                <h2>确定取消收藏：《\{{ctrl.cancelKeepTitle}}》？</h2>
+            </div>
+            <div class="opear">
+                <button class="btn btn-default cancelKeep">取消</button>
+                <button class="btn btn-primary"  ng-click="ctrl.docancelKeep(ctrl.cancelKeepId)"">确定</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="tipBox"></div>
+{{#section 'user-page-js'}}
+    <script src="/javascripts/userPage-ng.js"></script>
+    <script src="/javascripts/userPage.js"></script>
+{{/section}}

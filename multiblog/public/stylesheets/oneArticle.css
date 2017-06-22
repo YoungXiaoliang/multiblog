@@ -1,0 +1,292 @@
+body{
+    background-color: #e9e9e9;
+}
+section.oneArticlePage{
+    color: #444;
+    width: 1000px;
+    border: 1px solid #d5d5d5;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    min-height: 500px;
+}
+section.oneArticlePage>div{
+    background-color: white;
+}
+section.oneArticlePage p{
+    color: #444;
+}
+section.oneArticlePage .article-top{
+    text-align: center;
+    padding-top: 30px;
+}
+.article-top a{
+    display: inline-block;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.article-content{
+    border-top: 1px solid #d5d5d5;
+    /*border-bottom: 1px solid #d5d5d5;*/
+    padding: 10px;
+}
+.article-content p{
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+.article-opea{
+    padding: 10px 50px;
+    text-align: right;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+}
+.article-opea span{
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/*评论*/
+div.article-comment{
+    width: 100%;
+    display: none;
+}
+div.article-comment .comment-list{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #d5d5d5;
+    position: relative;
+}
+div.article-comment .comment-list:first-child{
+    margin-top: 10px;
+}
+div.comment-auth-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+div.comment-auth-img img{
+    height: inherit;
+    width: inherit;
+}
+a.comment-auth-name{
+    text-align: center;
+    display: block;
+}
+div.comment-content{
+    margin-left: 20px;
+
+}
+div.comment-content p{
+    padding-top: 10px;
+}
+.replyText a{
+    color: #00B7FF;
+}
+.comment-time{
+    font-size: 12px;
+}
+.comment-list .replyBtn{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    display: none;
+}
+.comment-list .replyBtn:hover{
+    color: #00b3ee;
+}
+.comment-list .doReply,.comment-list .cancelReply,.comment-list .delComment{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.comment-list .cancelReply,.comment-list .delComment{
+    display: none;
+}
+.comment-list .replyForm{
+    border-top: 1px solid #d5d5d5;
+    padding: 10px;
+    display: none;
+}
+.comment-list .replyForm textarea{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.comment-list .replyForm button{
+    vertical-align: top;
+}
+
+.show-comment{
+    padding: 10px;
+}
+.show-comment span:hover{
+    cursor: pointer;
+    color: #00b3ee;
+}
+/*写评论*/
+div.do-comment{
+    margin-top: 10px;
+}
+.commentForm {
+    padding: 10px;
+}
+div.do-comment textarea{
+    display: block;
+    width: 500px;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.commentForm button{
+    width: 70px;
+}
+
+/*提示框*/
+div.tipBox{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 100px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bolder;
+    opacity: 0;
+    visibility: hidden;
+}
+div.showTime{
+    -webkit-animation: showAndHidden 1s linear forwards;
+    -moz-animation: showAndHidden 1s linear forwards;
+    -ms-animation: showAndHidden 1s linear forwards;
+    animation: showAndHidden 1s linear forwards;
+}
+
+@-webkit-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-moz-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-ms-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    10%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*弹出框*/
+section.oneArticlePage .pop-Model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 9998;
+    overflow: scroll;
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+    color: #444;
+    display: none;
+}
+.pop-Model::-webkit-scrollbar{width:0px}
+
+div.edit-box{
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 470px;
+    height: 130px;
+    background-color: white;
+    border-radius: 10px;
+}
+div.edit-box .close{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+div.edit-box h2{
+    line-height: 50px;
+    text-align: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+.opear{
+    padding: 20px;
+    text-align: right;
+}
+.opear button{
+    width: 80px;
+}

@@ -1,0 +1,98 @@
+div.info-list{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #a5a5a5;
+    position: relative;
+}
+div.articleType{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 50px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    background-image: url("../images/info/bookmark.png");
+    background-size:76px 35px;
+    background-position: -15px 0;
+    background-repeat: no-repeat;
+    color: white;
+}
+div.user-mess{
+    width: 100px;
+}
+div.user-mess #user-pic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    /*background-image: url("../images/squarePage/squarePage4.jpg");*/
+}
+div.user-mess #user-pic img{
+    width: inherit;
+    height: inherit;
+}
+div.user-mess p{
+    text-align: center;
+}
+div.info-body{
+    vertical-align: top;
+    width: 630px;
+    background-color: #d0d6d9;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+div.info-body>div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.info-body .info-top{
+    border-bottom: 1px solid ghostwhite;
+    padding-left: 10px;
+}
+div.info-body .info-top>a{
+    display: inline-block;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+div.info-body .info-content{
+    max-height: 135px;
+    overflow-y: hidden;
+}
+div.info-body .info-content p{
+    overflow: hidden;
+    max-height: 105px;
+    font-size: 15px;
+    text-indent: 2em;
+    padding: 0 10px;
+}
+div.info-body .info-opera{
+    border-top: 1px solid ghostwhite;
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 0;
+}
+.info-opera a.doKeep,.info-opera a.doLike{
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    font-size: 14px;
+    color: #333;
+}
+.info-opera a:hover,.info-opera a:focus,.info-opera a:visited{
+    text-decoration: none;
+}
+div.info-body .left-icon{
+    position: absolute;
+    height: 0px;
+    width: 0;
+    top: 20px;
+    left: -20px;
+    border-right: 20px solid #d0d6d9;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    padding: 0;
+}

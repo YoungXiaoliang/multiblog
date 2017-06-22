@@ -1,0 +1,542 @@
+html {
+	-ms-overflow-style:none;
+	overflow:-moz-scrollbars-none;
+}
+html::-webkit-scrollbar{width:0px}
+
+html,body{
+	height: 100%;
+}
+body{
+	padding-top: 0;
+}
+#wrap-box{
+	height: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+#main-content-box{
+	position: relative;
+	left: 0;
+	top: 0;
+	-webkit-transition: top 1s;
+            transition: top 1s;
+}
+#main-content-box section{
+	width: 100%;
+	padding: 95px 130px 0px;
+	box-sizing: border-box;
+}
+/*图片展示*/
+#main-content-box section.show-window{
+	position: relative;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+}
+.show-window #image-show-box{
+	display: block;
+	height: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	transition: background-image .8s;
+}
+.show-window #image-title{
+	margin: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	line-height: 60px;
+	background-color: rgba(0,0,0,.4);
+}
+
+.show-window #image-btn-list{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 10%;
+	text-align: center;
+}
+#image-btn-list li{
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	margin-left: 10px;
+}
+#image-btn-list li>a{
+	display: block;
+	height: 10px;
+	width: 10px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+#image-btn-list li.active-btn>a{
+	height: 20px;
+	margin: 0;
+}
+
+/*学习模块*/
+
+.study-module>div,.square-module>div,.friend-module>div,.publish-module>div{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+.study-module-des h2,.square-module-des h2,.friend-module-des h2,.publish-module-des h2{
+	font-size: 60px;
+	color: #05d6ae;
+	margin-top: 20%;
+	margin-bottom: 30px;
+	padding-left: 20px;
+	
+}
+.square-module-des h2,.publish-module-des h2{
+	text-align: right;
+}
+.study-module-des p,.square-module-des p,.friend-module-des p,.publish-module-des p{
+	font-size: 25px;
+	color: #c1c1c1;
+	padding-left: 20px;
+}
+.square-module-des p,.publish-module-des p{
+	text-align: right;
+}
+.module-button {
+	display: block;
+	width: 150px;
+	color: white;
+	background-color: #05d6ae;
+	text-align: center;
+	font-size: 18px;
+	line-height: 35px;
+	font-weight: bold;
+	border: 1px solid #05d6ae;
+	box-shadow: 0 0 5px #05d6ae;
+	transition: background-color .3s;
+	border-radius: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.square-module-des .module-button,.publish-module-des .module-button{
+	float: right;
+} 
+.module-button:hover{
+	color: #05d6ae;
+	background-color: white;
+	text-decoration: none;
+}
+.module-img{
+	position: relative;
+	height: 90%;
+	box-sizing: border-box;
+	overflow:hidden;
+}
+.module-img>div{
+	position: absolute;
+	width: 250px;
+	height: 300px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	transition: all 1s;
+}
+.study-img1{
+	top: 100%;
+	left: 0px;
+	background-image: url(../images/homePage/study-img1.jpg);
+}
+.animation-module .study-img1{
+	top: 10%;
+	-webkit-animation: studyImg1 1s 1s linear alternate infinite;	
+	-moz-animation: studyImg1 1s 1s linear alternate infinite;
+	-ms-animation: studyImg1 1s 1s linear alternate infinite;
+		animation: studyImg1 1s 1s linear alternate infinite;
+}
+.study-img2{
+	top: 100%;
+	right: 10px;
+	background-image: url(../images/homePage/study-img2.jpg);
+}
+.animation-module .study-img2{
+	-webkit-animation: studyImg2 5s 0.5s forwards;	
+	-moz-animation: studyImg2 5s 0.5s forwards;
+	-ms-animation: studyImg2 5s 0.5s forwards;
+		animation: studyImg2 5s 0.5 forwards;
+}
+/*图片动画*/
+@-webkit-keyframes studyImg1{
+	from{
+		top:10%
+	}
+	to{
+		top: 15%
+	}	
+}
+@-moz-keyframes studyImg1{
+	from{
+		top:10%
+	}
+	to{
+		top: 15%
+	}	
+}
+@-ms-keyframes studyImg1{
+	from{
+		top:10%
+	}
+	to{
+		top: 15%
+	}	
+}
+@keyframes studyImg1{
+	from{
+		top:10%
+	}
+	to{
+		top: 15%
+	}	
+}
+
+
+@-webkit-keyframes studyImg2{
+	0%{
+		top:100%
+	}
+	20%{
+		top:10%
+	}
+	30%{
+		top:15%;
+	}
+	100%{
+		top:15%
+	}
+}
+@-moz-keyframes studyImg2{
+	0%{
+		top:100%
+	}
+	20%{
+		top:10%
+	}
+	30%{
+		top:15%;
+	}
+	100%{
+		top:15%
+	}
+}
+@-ms-keyframes studyImg2{
+	0%{
+		top:100%
+	}
+	20%{
+		top:10%
+	}
+	30%{
+		top:15%;
+	}
+	100%{
+		top:15%
+	}
+}
+@keyframes studyImg2{
+	0%{
+		top:100%
+	}
+	20%{
+		top:10%
+	}
+	30%{
+		top:15%;
+	}
+	100%{
+		top:15%
+	}
+}
+
+/*广场模块*/
+
+.square-img1{
+	top: 10%;
+	right: 100%;
+	background-image: url(../images/homePage/square-img1.jpg);
+}
+.animation-module .square-img1{
+	right: 50%;
+	transition: right 1s 1s;
+}
+.square-img2{
+	top: 10%;
+	right: 100%;
+	background-image: url(../images/homePage/square-img2.jpg);
+}
+.animation-module .square-img2{
+	right: 10px;
+	-webkit-animation: squareImg2 1s 1s linear infinite;	
+	-moz-animation: squareImg2 1s 1s linear infinite;
+	-ms-animation: squareImg2 1s 1s linear infinite;
+		animation: squareImg2 1s 1s linear infinite;	
+}
+/*图片动画*/
+@-webkit-keyframes squareImg2{
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(5deg);
+	}
+	75%{
+		transform: rotate(-5deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@-moz-keyframes squareImg2{
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(5deg);
+	}
+	75%{
+		transform: rotate(-5deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@-ms-keyframes squareImg2{
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(5deg);
+	}
+	75%{
+		transform: rotate(-5deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+@keyframes squareImg2{
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(5deg);
+	}
+	75%{
+		transform: rotate(-5deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+
+/*好友模块*/
+
+.animation-module .friend-img1{
+	/*bottom: 100%;*/
+	top: 100%;
+	left: 5px;
+	background-image: url(../images/homePage/friend-img1.jpg);
+	-webkit-animation: friendImg1 10s infinite linear;	
+	-moz-animation: friendImg1 10s infinite linear;
+	-ms-animation: friendImg1 10s infinite linear;
+		animation: friendImg1 10s infinite linear;
+}
+.animation-module .friend-img2{
+	/*bottom: 100%;*/
+	top: 100%;
+	right: 5px;
+	background-image: url(../images/homePage/friend-img2.jpg);
+	-webkit-animation: friendImg1 10s infinite 0.5s;	
+	-moz-animation: friendImg1 10s infinite 0.5s;
+	-ms-animation: friendImg1 10s infinite 0.5s;
+		animation: friendImg1 10s infinite 0.5;
+}
+/*图片动画*/
+@-webkit-keyframes friendImg1{
+	0%{
+		top:100%
+	}
+	7%{
+		top:10%
+	}
+	10%{
+		top:15%
+	}
+	70%{
+		top:15%
+	}
+	73%{
+		top:10%;
+	}
+	80%{
+		top:100%;
+	}
+	100%{
+		top:100%
+	}
+}
+@-moz-keyframes friendImg1{
+	0%{
+		top:100%
+	}
+	7%{
+		top:10%
+	}
+	10%{
+		top:15%
+	}
+	70%{
+		top:15%
+	}
+	73%{
+		top:10%;
+	}
+	80%{
+		top:100%;
+	}
+	100%{
+		top:100%
+	}
+}
+@-ms-keyframes friendImg1{
+	0%{
+		top:100%
+	}
+	7%{
+		top:10%
+	}
+	10%{
+		top:15%
+	}
+	70%{
+		top:15%
+	}
+	73%{
+		top:10%;
+	}
+	80%{
+		top:100%;
+	}
+	100%{
+		top:100%
+	}
+}
+@keyframes friendImg1{
+	0%{
+		top:100%
+	}
+	7%{
+		top:10%
+	}
+	10%{
+		top:15%
+	}
+	70%{
+		top:15%
+	}
+	73%{
+		top:10%;
+	}
+	80%{
+		top:100%;
+	}
+	100%{
+		top:100%
+	}
+}
+
+/*发表模块*/
+
+
+.animation-module .publish-img1{
+	/*bottom: 100%;*/
+	top: 100%;
+	left: 5px;
+	background-image: url(../images/homePage/publish-img1.jpg);
+	-webkit-animation: publishImg1 5s forwards 0.5s;	
+	-moz-animation: publishImg1 5s forwards  0.5s;
+	-ms-animation: publishImg1 5s forwards  0.5s;
+		animation: publishImg1 5s forwards  0.5s;
+}
+.animation-module .publish-img2{
+	/*bottom: 100%;*/
+	top: 100%;
+	right: 5px;
+	background-image: url(../images/homePage/publish-img2.jpg);
+	-webkit-animation: publishImg1 3s forwards;	
+	-moz-animation: publishImg1 3s forwards;
+	-ms-animation: publishImg1 3s forwards;
+		animation: publishImg1 3s forwards;
+}
+/*图片动画*/
+@-webkit-keyframes publishImg1{
+	0%{
+		top: 100%;
+	}
+	20%{
+		top: 10%;
+	}
+	25%{
+		top: 15%;
+	}
+	100%{
+		top: 15%;
+	}
+}
+@-moz-keyframes publishImg1{
+	0%{
+		top: 100%;
+	}
+	20%{
+		top: 10%;
+	}
+	25%{
+		top: 15%;
+	}
+	100%{
+		top: 15%;
+	}
+}
+@-ms-keyframes publishImg1{
+	0%{
+		top: 100%;
+	}
+	20%{
+		top: 10%;
+	}
+	25%{
+		top: 15%;
+	}
+	100%{
+		top: 15%;
+	}
+}
+@keyframes publishImg1{
+	0%{
+		top: 100%;
+	}
+	20%{
+		top: 10%;
+	}
+	25%{
+		top: 15%;
+	}
+	100%{
+		top: 15%;
+	}
+}

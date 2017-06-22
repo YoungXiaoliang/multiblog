@@ -1,0 +1,68 @@
+{{#section 'one-article-css'}}
+    <link rel="stylesheet" href="/stylesheets/oneArticle.css" >
+{{/section}}
+
+<section class="oneArticlePage" ng-controller="oneArticleController as ctrl">
+    <div class="article-top">
+        <h1>\{{ctrl.OneArticle.articleTitle}}</h1>
+        <a href="/otherUserPage?otherUser=\{{ctrl.OneArticle.articleAuthor}}">\{{ctrl.OneArticle.articleAuthor}}</a>
+        <p><span>\{{ctrl.OneArticle.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'&nbsp;&nbsp;'+'HH:mm:ss'}}</span>&nbsp;&nbsp;<span>浏览(<span>\{{ctrl.OneArticle.browse}}</span>)</span></p>
+    </div>
+    <div class="article-content">
+        <div ng-bind-html="ctrl.OneArticle.articleContent | trustHtml"></div>
+    </div>
+    <div class="article-opea">
+        <span ng-click="ctrl.doKeep(ctrl.OneArticle._id)">收藏(\{{ctrl.articleKeep}})</span>
+        <span ng-click="ctrl.doLike(ctrl.OneArticle._id)">点赞(\{{ctrl.articleLike}})</span>
+    </div>
+    <div class="show-comment"><span>展开评论</span>(\{{ctrl.commentCount}})</div>
+    <div class="article-comment">
+        <div class="comment-list" ng-repeat="comment in ctrl.articleComments" ng-init="outindex=$index" ng-mousemove="ctrl.inComment($index)" ng-mouseleave="ctrl.outComment($index)" repeat-finish="renderFinish()">
+            <div class="comment-auth fl">
+                <div class="comment-auth-img">
+                    <img ng-src="\{{ctrl.commentAuthorPics[$index]}}">
+                </div>
+                <a href="javascript:;" class="comment-auth-name" ng-click="ctrl.seeUser(comment.commentAuthor)">\{{comment.commentAuthor}}</a>
+            </div>
+            <div class="comment-content fl">
+                <p><span class="replyText">回复-<a href="javascript:;">\{{comment.commentReply}}</a>\{{}}</span>：\{{comment.commentContent}}</p>
+                <p class="comment-time">\{{comment.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}}</p>
+            </div>
+            <div class="clear"></div>
+            <div class="replyBtn">
+                <span class="doReply" ng-click="ctrl.replyShow($index)">回复</span>
+                <span class="cancelReply" ng-click="ctrl.replyHide($index)">取消</span>
+                <span class="delComment" ng-click="ctrl.toDelComment(comment._id,comment.commentAuthor)">删除</span>
+            </div>
+            <form class="replyForm" ng-submit="ctrl.doReply($index)">
+                <textarea ng-model="ctrl.replyComment[$index].commentContent" required></textarea>
+                <button type="submit" class="btn btn-default">回复</button>
+            </form>
+        </div>
+    </div>
+    <div class="do-comment">
+        <form name="commentForm" class="commentForm" ng-submit="ctrl.doComment()">
+            <textarea required ng-model="ctrl.comment.commentContent"></textarea>
+            <button type="submit" ng-disabled="commentForm.$invalid" class="btn btn-default">评论</button>
+        </form>
+    </div>
+
+    <!--删除评论提示框-->
+    <div class="delComment-Model pop-Model">
+        <div class="edit-box">
+            <button type="button" class="close canceldelComment"><span aria-hidden="true">&times;</span></button>
+            <h2>删除评论</h2>
+            <div class="opear">
+                <button class="btn btn-default canceldelComment">取消</button>
+                <button class="btn btn-primary doDelComment" ng-click="ctrl.delComment(ctrl.delComId,ctrl.delComAut)">确定</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="tipBox"></div>
+
+
+
+{{#section 'one-article-js'}}
+    <script src="/javascripts/oneArticle.js"></script>
+{{/section}}

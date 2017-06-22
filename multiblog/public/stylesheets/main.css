@@ -1,0 +1,426 @@
+@charset "UTF-8";
+html,body{width: 100%;height: 100%;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:14px;font-family: "microsoft yahei";overflow-x: auto;}
+img{border:none;}
+li{list-style:none;}
+a{text-decoration:none; color:black}
+a:focus{outline: none;text-decoration: none}
+header,article,section,footer,nav{display: block;}
+textarea{resize: none; }
+p{color: black}
+/*清浮动*/
+.clear:after{content:"";display:block;clear:both;}
+.clear{zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+body{
+    padding-top: 95px;
+    background-color: white;
+    min-width: 1030px;
+    overflow-x: scroll;
+}
+/*头部*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 5px 10px black;
+    transition: opacity .3s;
+    background-color: white;
+    z-index: 9999;
+}
+nav.row{
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0  auto;
+    transition: padding 0.3s;
+}
+.logo{
+    margin-top: 10px;
+}
+.logo a{
+    display: block;
+    height: 60px;
+}
+.logo a:hover{
+    text-decoration: none;
+}
+.logo a i{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 0;
+}
+.logo a i:first-child{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url("../images/logo.jpg");
+}
+.logo a i:last-child{
+    width: 140px;
+    height: 60px;
+    background-image: url("../images/logo1.jpg");
+}
+.menu ul {
+    width: 90%;
+    text-align: justify;
+}
+.menu ul:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}
+.menu li{
+    display: inline-block;
+    padding-top: 20px;
+    /*padding-bottom: 20px;*/
+}
+.menu li a{
+    display: block;
+    position: relative;
+    font-weight: bolder;
+    color: #888888;
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.menu li a:after{
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    transition: all .3s;
+}
+.menu li a:hover{
+    text-decoration: none;
+    color: black;
+}
+.menu li a:hover:after{
+    width: 100%;
+}
+
+.minMenu{
+    display: none;
+    height: 60px;
+    padding-top: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.minMenu a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+}
+.minMenu a:hover{
+    text-decoration: none;
+    color: red;
+}
+.userImg{
+    margin-top: 10px;
+}
+.userImg>div{
+    width: 200px;
+    height: 65px;
+}
+/**未登录*/
+.userImg div.noLogin{
+    text-align: right;
+}
+.userImg div.noLogin p{
+    line-height: 60px;
+    font-size: 15px;
+}
+/*登录状态*/
+.userImg div.logining{
+    position: relative;
+}
+
+.userImg div.logining a{
+    display: inline-block;
+}
+.userImg div.logining a#userImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.userImg div.logining a#userImage img{
+    width: inherit;
+    height: inherit;
+}
+.userImg div.logining a#userName{
+    line-height: 60px;
+    font-size: 18px;
+}
+.userImg div.logining a#userName:hover{
+    color: #00B7FF;
+    text-decoration: none;
+}
+.loginOpear{
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 18px;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    line-height: 50px;
+    width: 150px;
+    text-align: center;
+    transition: height .3s;
+    border-radius: 5px;
+}
+.loginOpear:hover{
+    color: #00B7FF;
+    cursor: pointer;
+}
+.userImg div.logining:hover .loginOpear{
+    height: 50px;
+}
+
+/*尾部*/
+footer{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 -5px 10px black;
+    width: 100%;
+}
+footer .row{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer figure{
+    height: 50px;
+    text-align: center;
+}
+.foot-log{
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    text-align: left;
+}
+.foot-log a{
+    display: inline-block;
+}
+.foot-log .logo-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url("../images/logo.jpg") 0px 0 no-repeat;
+    background-size: 100% 100%;
+}
+.foot-log .logo-text{
+    position: absolute;
+    width: 140px;
+    height: 60px;
+    top: 0;
+    left: 50px;
+    background: url("../images/logo1.jpg") 0 0  no-repeat;
+    background-size: 100% 100%;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.foot-log:hover .logo-text{
+    left: 65px;
+    opacity: 1;
+}
+
+.foot-nav{
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+}
+.foot-nav ul{
+    text-align: justify;
+}
+.foot-nav ul:after{
+    content: "";
+    display: inline-block;
+    height: 0;
+    line-height: 0;
+    width: 100%;
+}
+.foot-nav li{
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.foot-nav a{
+    display: block;
+    color: #888;
+    position: relative;
+}
+.foot-nav a:hover{
+    text-decoration: none;
+    color: black;
+}
+.foot-nav a:after{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background-color: red;
+    transition: width 0.3s;
+}
+.foot-nav a:hover:after{
+    width: 100%;
+}
+
+/*登录界面*/
+#loginMain{
+    visibility: hidden;
+    width:380px;
+    height: 0px;
+    position: fixed;
+    z-index: 9999;
+    top:0;right: 0;bottom: 0;left: 0;
+    margin: auto;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 20px black;
+    transition: height 0.5s;
+}
+#loginMain .loginTop p{
+    width: inherit;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    border-bottom: 2px solid #656565;
+}
+#loginMain #closeBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    background: url("../images/close.png") 0 no-repeat;
+    background-size: cover;
+}
+#loginMain .loginBody{
+    width: inherit;
+    box-sizing: border-box;
+    padding: 0px 40px;
+}
+#loginMain .loginBody form p{
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+}
+
+#loginMain .loginBody input{
+    width: 100%;
+    height: 40px;
+    padding: 3px 35px;
+    border-radius: 5px;
+}
+#loginMain .loginBody form p i{
+    position: absolute;
+    top:4px;
+    left: 0px;
+    display: block;
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+}
+#loginMain .loginBody form p:nth-child(1) i{
+    background-image: url("../images/user.png");
+}
+#loginMain .loginBody form p:nth-child(2) i{
+    background-image: url("../images/password.png");
+}
+#loginMain .loginBody form p em{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: red;
+    padding-left: 10px;
+    line-height: 20px;
+    display: none;
+}
+#loginMain .loginBody form p.forgetPwd{
+    text-align: right;
+}
+#loginMain .loginBody form p.forgetPwd a{
+    color: white;
+}
+#loginMain .loginBody form p:nth-child(4){
+    margin-top: 5px;
+}
+#loginMain .loginBody button{
+    width: 100%;
+    height: 40px;
+    background-color: #00CD00;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+}
+#loginMain .loginBody a.registerBtn{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: right;
+    color: white;
+}
+#loginMain .loginBody a.registerBtn a:hover{
+    text-decoration: none;
+    color: red;
+}
+/*退出提示框*/
+#exit-tip-modal{
+    visibility: hidden;
+    width: 400px;
+    height: 0px;
+    position: fixed;
+    z-index: 9999;
+    top:0;right: 0;bottom: 0;left: 0;
+    margin: auto;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 20px black;
+    transition: height 0.5s;
+    color: white;
+    overflow: hidden;
+}
+#exit-tip-modal h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+#exit-tip-modal .exit-select{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+#exit-tip-modal .exit-select>div{
+    cursor: pointer;
+}
+#exit-tip-modal .exit-select>div:hover{
+    text-decoration: underline;
+}

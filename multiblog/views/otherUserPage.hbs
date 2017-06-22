@@ -1,0 +1,95 @@
+{{#section 'other-user-page-css'}}
+    <link rel="stylesheet" href="/stylesheets/otherUserPage.css">
+{{/section}}
+
+<section class="userPage" ng-controller="otherUserController as ctrl">
+    <section class="userMess">
+        <!--用户基本信息-->
+        <div class="user-information">
+            <div class="user-page-img fl">
+                <img src="\{{ctrl.otheruser.picture}}">
+                {{#if loginUser}}
+                    <div class="follow"><a href="javascript:;" ng-click="ctrl.doFollow(ctrl.otheruser.username)" class="followUser">关注</a></div>
+                {{else}}
+                    <div class="follow"><a href="javascript:;" ng-click="ctrl.doNologinFollow()">关注</a></div>
+                {{/if}}
+
+            </div>
+            <div class="user-page-mess fl">
+                <h3 class="user-page-name">\{{ctrl.otheruser.username}}</h3>
+                <p>Email：<span>\{{ctrl.otheruser.useremail}}</span></p>
+                <p>年龄：<span>\{{ctrl.otheruser.age}}</span></p>
+                <p>性别：<span>\{{ctrl.otheruser.gender}}</span></p>
+                <p>职位：<span>\{{ctrl.otheruser.job}}</span></p>
+                <p>地址：<span>\{{ctrl.otheruser.address}}</span></p>
+                <p>个人简介： <span>\{{ctrl.otheruser.brief}}</span></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!--用户动态信息-->
+        <div class="user-dynamic">
+            <div class="user-page-btn-list">
+                <button class="activeBtn" ng-click="ctrl.currentTab = 'default'">发布</button>
+                <button ng-click="ctrl.currentTab = 'follows'">关注</button>
+                <button ng-click="ctrl.currentTab = 'fans'">粉丝</button>
+            </div>
+            <div class="user-page-content" ng-switch="ctrl.currentTab">
+                <div class="user-page-myPublish" ng-switch--default>
+                    <h3>Ta的发布</h3>
+                    <div class="myPublish-list" ng-repeat="taArticle in ctrl.otheruserArticles">
+                        <div class="myPublish-top">
+                            <a href="/oneArticle?articleAddr=\{{taArticle._id}}" target="_blank">\{{taArticle.articleTitle}}</a>
+                            <p>\{{taArticle.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}} </p>
+                        </div>
+                        <div class="myPublish-content">
+                            <div  ng-bind-html="taArticle.articleContent | trustHtml"></div>
+                        </div>
+                        <!--<div class="myPublish-opera">
+                            <a href="javascript:;" title="编辑" ng-click="ctrl.getEditArticle(loginArticle._id)" data-toggle="modal" data-target="#editArticleModal">编辑</a>
+                            <a href="javascript:;" title="删除" ng-click="ctrl.delArticleAlert(loginArticle._id,loginArticle.articleTitle)" data-toggle="modal" data-target="#delArticleModal">删除</a>
+                        </div>-->
+                        <div class="articleType">\{{taArticle.articleType}}</div>
+                    </div>
+                </div>
+                <div class="user-page-myFollows" ng-switch-when="follows">
+                    <h3>Ta的关注</h3>
+                    <div class="myFollow-list" ng-repeat="taFollows in ctrl.otheruserFollows">
+                        <div class="follw-img fl">
+                            <img ng-src="\{{taFollows.picture}}">
+                        </div>
+                        <div class="follw-mes fl">
+                            <a href="/otherUserPage?otherUser=\{{taFollows.username}}" class="otherName">\{{taFollows.username}}</a>
+                            <p>性别：  <span>\{{taFollows.gender}}</span></p>
+                            <p>年龄：  <span>\{{taFollows.age}}</span></p>
+                            <p>职业：  <span>\{{taFollows.job}}</span></p>
+                            <p>个人简介：    <span>\{{taFollows.brief}}</span></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="user-page-myFans" ng-switch-when="fans">
+                    <h3>Ta的粉丝</h3>
+                    <div class="myFans-list" ng-repeat="taFans in ctrl.otheruserFans">
+                        <div class="fans-img fl">
+                            <img ng-src="\{{taFans.picture}}">
+                        </div>
+                        <div class="fans-mes fl">
+                            <a href="/otherUserPage?otherUser=\{{taFans.username}}" class="otherName">\{{taFans.username}}</a>
+                            <p>性别：  <span>\{{taFans.gender}}</span></p>
+                            <p>年龄：  <span>\{{taFans.age}}</span></p>
+                            <p>职业：  <span>\{{taFans.job}}</span></p>
+                            <p>个人简介：    <span>\{{taFans.brief}}</span></p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<div class="tipBox"></div>
+
+{{#section 'otheruser-page-js'}}
+    <script src="/javascripts/otherUserPage-ng.js"></script>
+{{/section}}

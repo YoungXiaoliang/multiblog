@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>{{title}}</title>
+    <meta name="description" content="wakaka">
+    <meta name="keywords" content="bootstrap">
+    <!--视口-->
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/studyPage/jquery.treemenu.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    {{{_sections.home-page-css}}}
+    {{{_sections.study-default-css}}}
+    {{{_sections.study-page-css}}}
+    {{{_sections.square-page-css}}}
+    {{{_sections.frend-page-css}}}
+    {{{_sections.user-page-css}}}
+    {{{_sections.other-user-page-css}}}
+    {{{_sections.one-article-css}}}
+    {{{_sections.publish-page-css}}}
+    {{{_sections.login-css}}}
+
+</head>
+
+<body data-spy="scroll" data-target=".scrollEven" ng-app="mainApp"  ng-controller="mainCtroller as mainCtrl">
+<header class="container-fluid">
+    <nav class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4 logo">
+            <a href="/">
+                <i></i>
+                <i></i>
+            </a>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6 menu">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="/squarePage">广场</a></li>
+                {{#if loginUser}}
+                    <li><a href="/friendsPage">好友圈</a></li>
+                    <li><a href="/publishPage">发布</a></li>
+                {{/if}}
+                <li><a href="/study">学习</a></li>
+                <!--<li><a href="javascript:;"></a></li>-->
+            </ul>
+
+            <div class="minMenu">
+                <a href="javascript:;" class="glyphicon glyphicon-align-justify"></a>
+            </div>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-xs-2 userImg">
+            {{#if loginUser}}
+                <div class="logining">
+                    <a href="/userPage" id="userImage" class="fl">
+                        <img src="{{loginUser.picture}}">
+                    </a>
+                    <a href="/userPage" id="userName" class="fl">
+                        <span>{{loginUser.username}}</span>
+                    </a>
+                    <a class="clear"></a>
+                    <span class="loginOpear" ng-click="mainCtrl.exitLogin()">退出</span>
+                </div>
+            {{else}}
+                <div class="noLogin">
+                    <p>您还没登录，请<a href="javascript:;" id="loginBtn">登录</a></p>
+                </div>
+            {{/if}}
+        </div>
+    </nav>
+</header>
+
+{{{body}}}
+
+<!--登录框-->
+<div id="loginMain">
+    <div class="loginTop">
+        <p>用户登录</p>
+    </div>
+    <a href="javascript:;" id="closeBtn" title="close"></a>
+    <div class="loginBody">
+        <form>
+            <p><input type="text" ng-model="mainCtrl.user.userName" class="username">
+                <em id="usernameMes">用户名错误！</em>
+                <i></i>
+            </p>
+            <p><input type="password" ng-model="mainCtrl.user.userPwd" class="userpassword">
+                <em id="pwdMes">密码错误！</em>
+                <i></i>
+            </p>
+            <!--<p class="forgetPwd"><a href="javascript:;">忘记密码?</a></p>-->
+            <p><button ng-click="mainCtrl.login()">登录</button></p>
+        </form>
+        <a href="/register" class="registerBtn">还没有账号？点击注册</a>
+    </div>
+</div>
+<!--退出提示框-->
+<div id="exit-tip-modal">
+    <h2>确定退出？</h2>
+    <div class="exit-select">
+        <div class="true-exit fl" ng-click="mainCtrl.trueExit()">确定</div>
+        <div class="cancel-exit fr">取消</div>
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <figure class="col-md-3 col-sm-12 col-xs-12">
+            <div class="foot-log">
+                <a href="javascript:;" class="logo-img"></a>
+                <a href="javascript:;" class="logo-text"></a>
+            </div>
+        </figure>
+        <div class="col-md-9 col-sm-12 col-xs-12 foot-nav">
+            <ul>
+                <li><a href="javascript;;">hello@prollective.com</a></li>
+                <li><a href="javascript;;">Facebook</a></li>
+                <li><a href="javascript;;">Twitter</a></li>
+                <li><a href="javascript;;">LinkedIn</a></li>
+                <li>&copy;2016 Made in Poland</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/vendor/angular/angular.min.js"></script>
+<script src="/vendor/angular-route/angular-route.min.js"></script>
+<script src="/javascripts/studyPage/jquery.treemenu.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/main-ng.js"></script>
+{{{_sections.home-page-js}}}
+{{{_sections.study-page--js}}}
+{{{_sections.study-page-js}}}
+{{{_sections.square-page-js}}}
+{{{_sections.friend-page-js}}}
+{{{_sections.one-article-js}}}
+{{{_sections.user-page-js}}}
+{{{_sections.otheruser-page-js}}}
+{{{_sections.publish-page-js}}}
+</body>
+</html>

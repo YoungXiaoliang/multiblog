@@ -1,0 +1,137 @@
+<section class="study-content-box">
+    <h2><span>进阶篇</span></h2>
+    <!--目录-->
+    <nav class="catalog-nav fl">
+        <ul class="tree study-list-first">
+            <li class="study-now catalog-list">
+                <a href="javascript:;" class="catalog-list-name">第一章</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;">1.1</a>
+                        <ul class="study-list-third" >
+                            <li><a href="javascript:;">1.1.1</a></li>
+                            <li><a href="javascript:;">1.1.2</a></li>
+                            <li><a href="javascript:;">1.1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">1.2</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;">1.2.1</a></li>
+                            <li><a href="javascript:;">1.2.2</a></li>
+                            <li><a href="javascript:;">1.2.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="javascript:;" class="catalog-list-name">第一章</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;">1.1</a>
+                        <ul class="study-list-third" >
+                            <li><a href="javascript:;">1.1.1</a></li>
+                            <li><a href="javascript:;">1.1.2</a></li>
+                            <li><a href="javascript:;">1.1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">1.2</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;">1.2.1</a></li>
+                            <li><a href="javascript:;">1.2.2</a></li>
+                            <li><a href="javascript:;">1.2.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="javascript:;" class="catalog-list-name">第一章</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;">1.1</a>
+                        <ul class="study-list-third" >
+                            <li><a href="javascript:;">1.1.1</a></li>
+                            <li><a href="javascript:;">1.1.2</a></li>
+                            <li><a href="javascript:;">1.1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">1.2</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;">1.2.1</a></li>
+                            <li><a href="javascript:;">1.2.2</a></li>
+                            <li><a href="javascript:;">1.2.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="javascript:;" class="catalog-list-name">第一章</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;">1.1</a>
+                        <ul class="study-list-third" >
+                            <li><a href="javascript:;">1.1.1</a></li>
+                            <li><a href="javascript:;">1.1.2</a></li>
+                            <li><a href="javascript:;">1.1.3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">1.2</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;">1.2.1</a></li>
+                            <li><a href="javascript:;">1.2.2</a></li>
+                            <li><a href="javascript:;">1.2.3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--章节内容-->
+    <div class="study-content fr">
+        <div class="chapter-box">
+            <div class="chapter-top">
+                <h2>第1章</h2>
+                <h1>初识Express</h1>
+            </div>
+            <div class="chapter-content">
+                <div class="section-box">
+                    <h3 class="section-top">1.1 </h3>
+                    <div class="section-content">
+                        <p></p>
+                        <li></li>
+                        <div class="sketch-para dot-in-font">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>
+
+<script>
+    $(function(){
+        $(".tree").treemenu({delay:300}).openActive();
+    });
+    /*点击章节名称*/
+    $(document).ready(function(){
+        $(".catalog-list-name").click(function () {
+            $(".catalog-list-name").parents("li.catalog-list").removeClass("study-now");
+            $(this).parents("li.catalog-list").addClass("study-now");
+        })
+    });
+    $(document).ready(function(){
+        $(".toggler").click(function () {
+            $(".toggler").parents("li.catalog-list").removeClass("study-now");
+            $(this).parents("li.catalog-list").addClass("study-now");
+        })
+    });
+    /*滚动目录位置*/
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 380 ){
+            $("nav.catalog-nav").css({"position":"fixed","left":"60px","top":"75px"});
+        }else{
+            $("nav.catalog-nav").css({"position":"relative","left":"0px","top":"0px"});
+        }
+    });
+</script>

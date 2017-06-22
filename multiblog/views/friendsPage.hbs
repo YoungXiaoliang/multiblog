@@ -1,0 +1,101 @@
+{{#section 'frend-page-css'}}
+    <link rel="stylesheet" href="/stylesheets/frendsPage.css">
+{{/section}}
+<section class="frendsPage" ng-controller="friendPageController as friendCtrl">
+    <div class="frendsPage-titlt">
+        <h2>好友圈\{{friendCtrl.friend}}</h2>
+    </div>
+    <div class="frends-list fl">
+        <ul>
+            <h3>我的好友</h3>
+            <li ng-repeat="myFriend in friendCtrl.myFriends" ng-init="index=$index" ng-click="friendCtrl.getOneFollow(index)">
+                <img ng-src="\{{myFriend.picture}}">
+                <span>\{{myFriend.username}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="friends-content nofriends fl">
+        <h3>木有好友，去<a href="/squarePage">广场</a>看看吧!!!!</h3>
+    </div>
+    <div class="friends-content yesfriends fl">
+        <div class="friendMess">
+            <!--用户基本信息-->
+            <div class="friend-information">
+                <div class="friend-img fl">
+                    <img ng-src="\{{friendCtrl.oneFriend.picture}}">
+                </div>
+                <div class="friend-mess fl">
+                    <a href="/otherUserPage?otherUser=\{{friendCtrl.oneFriend.username}}" class="friend-name">\{{friendCtrl.oneFriend.username}}</a>
+                    <p>Email：<span>\{{friendCtrl.oneFriend.useremail}}</span></p>
+                    <p>年龄：<span>\{{friendCtrl.oneFriend.age}}</span></p>
+                    <p>性别：<span>\{{friendCtrl.oneFriend.gender}}</span></p>
+                    <p>职位：<span>\{{friendCtrl.oneFriend.job}}</span></p>
+                    <p>地址：<span>\{{friendCtrl.oneFriend.address}}</span></p>
+                    <p>个人简介： <span>\{{friendCtrl.oneFriend.brief}}</span></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <!--用户动态信息-->
+            <div class="friend-dynamic">
+                <div class="friend-btn-list">
+                    <button class="activeBtn" ng-click="friendCtrl.currentTab = 'default'">发布</button>
+                    <button ng-click="friendCtrl.currentTab = 'follows'">关注</button>
+                    <button ng-click="friendCtrl.currentTab = 'fans'">粉丝</button>
+                </div>
+                <div class="friend-content" ng-switch="friendCtrl.currentTab">
+                    <div class="friendPublish" ng-switch--default>
+                        <h3>Ta的发布</h3>
+                        <div class="friendPublish-list" ng-repeat="friendArticle in friendCtrl.friendArticles">
+                            <div class="friendPublish-top">
+                                <a href="/oneArticle?articleAddr=\{{friendArticle._id}}" target="_blank">\{{friendArticle.articleTitle}}</a>
+                                <p>\{{friendArticle.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}} </p>
+                            </div>
+                            <div class="friendPublish-content">
+                                <div ng-bind-html="friendArticle.articleContent | trustHtml"></div>
+                            </div>
+                            <div class="articleType">\{{friendArticle.articleType}}</div>
+                        </div>
+                    </div>
+                    <div class="friendFollows" ng-switch-when="follows">
+                        <h3>Ta的关注</h3>
+                        <div class="friendFollow-list" ng-repeat="friendFollow in friendCtrl.friendFollows">
+                            <div class="friendFollw-img fl">
+                                <img ng-src="\{{friendFollow.picture}}">
+                            </div>
+                            <div class="friendFollw-mes fl">
+                                <a href="/otherUserPage?otherUser=\{{friendFollow.username}}" class="otherName">\{{friendFollow.username}}</a>
+                                <p>性别：  <span>\{{friendFollow.gender}}</span></p>
+                                <p>年龄：  <span>\{{friendFollow.age}}</span></p>
+                                <p>职业：  <span>\{{friendFollow.job}}</span></p>
+                                <p>个人简介：    <span>\{{friendFollow.brief}}</span></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="friendFans" ng-switch-when="fans">
+                        <h3>Ta的粉丝</h3>
+                        <div class="friendFans-list" ng-repeat="friendFan in friendCtrl.friendFans">
+                            <div class="friendFans-img fl">
+                                <img ng-src="\{{friendFan.picture}}">
+                            </div>
+                            <div class="friendFans-mes fl">
+                                <a href="/otherUserPage?otherUser=\{{friendFan.username}}" class="otherName">\{{friendFan.username}}</a>
+                                <p>性别：  <span>\{{friendFan.gender}}</span></p>
+                                <p>年龄：  <span>\{{friendFan.age}}</span></p>
+                                <p>职业：  <span>\{{friendFan.job}}</span></p>
+                                <p>个人简介：    <span>\{{friendFan.brief}}</span></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</section>
+{{#section 'friend-page-js'}}
+    <script src="/javascripts/friendPage-ng.js"></script>
+{{/section}}

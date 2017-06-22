@@ -1,0 +1,232 @@
+/*轮播*/
+a.square-img-show{
+    display: block;
+    width: 100%;
+}
+a.square-img-show h3{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+a.square-img-show p{
+    color: white;
+    font-size: 20px;
+}
+/*内容*/
+section.squarePage{
+    width: 100%;
+    padding: 10px 30px;
+    position: relative;
+    color: #333;
+    min-height: 350px;
+    margin-bottom: 50px;
+}
+section.squarePage p{
+    color: #333;
+}
+section.squarePage .square-titlt{
+    margin: 30px 0;
+    border: none;
+    background: url("../images/squarePage/square-titlte-bg.png") -20px center repeat-x;
+    background-size: 100px 50px ;
+    text-align: center;
+}
+section.squarePage .square-titlt h2{
+    display: inline-block;
+    font-size: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: white;
+}
+/*左侧菜单*/
+section.squarePage .square-menu{
+    position: absolute;
+    left: 100px;
+    top: 160px;
+    width: 150px;
+    padding: 0;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #d5d5d5;
+    background-image: url("../images/squarePage/menu.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 5px 12px;
+}
+.square-menu h3{
+    line-height: 40px;
+}
+.square-menu h3:hover{
+    cursor: pointer;
+}
+.square-menu ul{
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s;
+}
+.square-menu li{
+    display: block;
+    font-size: 18px;
+    line-height: 50px;
+    position: relative;
+}
+.square-menu li:after{
+    content: '';
+    position: absolute;
+    top:0;left: 0;
+    height: 50px;
+    width: 0;
+    background-color: #13beec;
+    transition: width .5s;
+    z-index: -1;
+}
+.square-menu li:hover{
+    cursor: pointer;
+}
+.square-menu li:hover:after{
+    width: 150px;
+}
+/*信息*/
+section.squarePage .square-content{
+    width: 780px;
+    border: 1px solid #d5d5d5;
+    margin: 70px auto;
+    margin-bottom: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+/*热门推荐*/
+section.squarePage .hot-article{
+    width: 220px;
+    border: 1px solid #d5d5d5;
+    position: absolute;
+    top: 160px;
+    right: 30px;
+    border-radius: 10px;
+}
+.hot-article h4{
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #d5d5d5;
+    background: url("../images/squarePage/hot.jpg") 30px center no-repeat;
+    background-size: 40px 40px ;
+}
+.hot-article ol{
+    padding-left: 10px;
+}
+.hot-article ol li{
+    list-style: decimal inside;
+    line-height: 35px;
+    border-bottom: 1px dashed #d5d5d5;
+    height: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hot-article ol li a{
+    color: #333;
+}
+.hot-article ol li a:hover{
+    color: #23527c;
+}
+
+div.tipBox{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 100px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bolder;
+    opacity: 0;
+    visibility: hidden;
+}
+div.showTime{
+    -webkit-animation: showAndHidden 1s linear forwards;
+    -moz-animation: showAndHidden 1s linear forwards;
+    -ms-animation: showAndHidden 1s linear forwards;
+        animation: showAndHidden 1s linear forwards;
+}
+/*提示框*/
+@-webkit-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-moz-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-ms-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    10%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

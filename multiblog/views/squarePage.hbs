@@ -1,0 +1,115 @@
+{{#section 'square-page-css'}}
+    <link rel="stylesheet" href="/stylesheets/squarePage.css">
+    <link rel="stylesheet" href="/stylesheets/info.css">
+{{/section}}
+<section  ng-controller="squareController as ctrl">
+<a href="javascript:;" class="square-img-show" ng-click="ctrl.toPublish()">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="/images/squarePage/squarePage1.jpg" alt="技术" style="width: 100%; height: 550px;">
+                <div class="carousel-caption">
+                    <h3>我有好技术</h3>
+                    <p>好东西大家一起分享</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/squarePage/squarePage3.jpg" alt="文章" style="width: 100%; height: 550px;">
+                <div class="carousel-caption">
+                    <h3>发表文章</h3>
+                    <p>偶尔秀秀文采，快来围观</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/squarePage/squarePage2.jpg" alt="问答" style="width: 100%; height: 550px;">
+                <div class="carousel-caption">
+                    <h3>有难题</h3>
+                    <p>大家一起解决</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/squarePage/squarePage4.jpg" alt="随记" style="width: 100%; height: 550px;">
+                <div class="carousel-caption">
+                    <h3>随便写写</h3>
+                    <p>有话要说，开启牢骚模式</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</a>
+<section class="squarePage ">
+    <div class="square-titlt">
+        <h2>交流广场</h2>
+    </div>
+    <!--分类-->
+    <div class="square-menu">
+        <h3 id="square-menu-title">分类</h3>
+        <ul id="square-menu-list">
+            <li ng-click="ctrl.getAllArticles()">全部</li>
+            <li ng-click="ctrl.getArticlesByType('文章')">文章</li>
+            <li ng-click="ctrl.getArticlesByType('随记')">随记</li>
+            <li ng-click="ctrl.getArticlesByType('技术')">技术</li>
+            <li ng-click="ctrl.getArticlesByType('问答')">问答</li>
+        </ul>
+    </div>
+    <!--文章内容-->
+    <div class="square-content">
+        <div class="info-list" ng-repeat="article in ctrl.Articles" ng-init="outindex = $index">
+            <div class="user-mess fl">
+                <div id="user-pic" ng-click="ctrl.seeUser(article.articleAuthor)">
+                    <img ng-src="\{{ctrl.authorPics[$index]}}">
+                </div>
+                <p>\{{article.articleAuthor}}</p>
+
+            </div>
+            <div class="info-body fr">
+                <div class="info-top">
+                    <a href="/oneArticle?articleAddr=\{{article._id}}" target="_blank">\{{article.articleTitle}}</a>
+                    <p>\{{ article.createTime | date:'yyyy'+'-'+ 'MM'+'-'+'dd'+'    '+'HH:mm:ss'}}</p>
+                </div>
+                <div class="info-content">
+                    <div ng-bind-html="article.articleContent | trustHtml"></div>
+                </div>
+                <div class="info-opera">
+                    <a class="doKeep" href="javascript:;" ng-click="ctrl.doKeep(article._id,outindex)" title="收藏">收藏(\{{ctrl.articleKeeps[outindex]}})</a>
+                    <a class="doLike" href="javascript:;" ng-click="ctrl.doLike(article._id,outindex)" title="点赞">点赞(\{{ctrl.articleLikes[outindex]}})</a>
+                </div>
+                <div class="left-icon"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="articleType">\{{article.articleType}}</div>
+        </div>
+    </div>
+    <!--热门推荐-->
+    <div class="hot-article" >
+        <h4>热门推荐</h4>
+        <ol>
+            <li ng-repeat="hotArticles in ctrl.hotArticles"><a href="/oneArticle?articleAddr=\{{hotArticles._id}}" target="_blank">\{{hotArticles.articleTitle}}</a></li>
+        </ol>
+    </div>
+</section>
+<div class="tipBox"></div>
+</section>
+{{#section 'square-page-js'}}
+    <script src="/javascripts/squarePage.js"></script>
+    <script src="/javascripts/squarePage-ng.js"></script>
+{{/section}}

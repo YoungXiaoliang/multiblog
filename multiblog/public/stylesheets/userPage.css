@@ -1,0 +1,498 @@
+body{
+    background-color: #e9e9e9;
+}
+/*.modal-open{
+    overflow: auto;
+}*/
+section.userPage{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 70%;
+    margin: 0 auto;
+    color: #333;
+}
+section.userPage p{
+    color: #333;
+}
+
+/*用户信息*/
+section.userMess>div{
+    background-color: white;
+}
+/*用户基本信息*/
+div.user-information{
+    padding:20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    position: relative;
+}
+div.edit-btn{
+    position: absolute;
+    right: 20px;top: 20px;
+    cursor: pointer;
+}
+div.edit-btn:hover{
+    color: #00CCFF;
+}
+div.user-picture{
+    text-align: center;
+    width: 150px;
+}
+div.user-page-img{
+    height: 150px;
+    /*background-image: url("../images/squarePage/squarePage4.jpg");*/
+    background-size: cover;
+}
+div.user-page-img img{
+    width: 150px;
+    height: inherit;
+}
+div.user-picture button{
+    color: #1E88C7;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+div.user-page-mess{
+    margin-left: 30px;
+    width: 80%;
+    max-height: 230px;
+    overflow-y: auto;
+}
+div.user-page-mess p{
+    line-height: 25px;
+}
+section.userPage .no-write {
+    color: #888;
+}
+
+/*用户动态信息*/
+div.user-dynamic{
+    margin-top: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+}
+    /*按钮*/
+div.user-page-btn-list{
+    text-align: left;
+    background-color: #e9e9e9;
+}
+div.user-page-btn-list button{
+    background-color: #e9e9e9;
+    border: none;
+    width: 200px;
+    line-height: 50px;
+    padding: 0;
+    font-size: 16px;
+}
+div.user-page-btn-list button:focus{
+    outline:none;
+}
+div.user-page-btn-list button.activeBtn{
+    background-color: white;
+}
+div.user-page-content{
+    padding-bottom: 50px;
+}
+div.user-page-content>div>h3{
+    text-align: center;
+    padding-bottom: 30px;
+}
+    /*发布内容*/
+div.user-page-myPublish,div.user-page-myFollows,div.user-page-myFans,.user-page-myKeeps{
+    width: 100%;
+    padding-top: 20px;
+}
+div.myPublish-list,div.myFollow-list,div.myFans-list{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid darkgrey;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 10px black;
+}
+div.myPublish-list>div{
+    padding: 10px;
+}
+div.myPublish-top a{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+div.myPublish-content{
+    max-height: 150px;
+    overflow-y: hidden;
+    border-top: 1px solid #d5d5d5;
+}
+div.myPublish-content p{
+    text-indent: 2em;
+    max-height: 100px;
+    overflow-y:  hidden;
+}
+div.myPublish-opera{
+    border-top: 1px solid #d5d5d5;
+}
+div.myPublish-opera>a{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.myPublish-list div.articleType{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    background-image: url("../images/info/bookmark.png");
+    background-size:76px 35px;
+    background-position: -15px 0;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 0;
+}
+    /*关注,粉丝*/
+div.myFollow-list,div.myFans-list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.follw-img,div.fans-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+div.follw-img img,div.fans-img img{
+    width: inherit;
+    height: inherit;
+}
+div.follw-mes,div.fans-mes{
+    width: 500px;
+    margin-left: 30px;
+    padding-right: 10px;
+}
+div.follw-mes .othername,div.fans-mes .othername{
+    font-size: 18px;
+}
+div.follw-mes p,div.fans-mes p{
+    padding-top: 5px;
+}
+.cancleFollow{
+    border-top: 1px solid gainsboro;
+    padding-top: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+.cancleFollow a{
+    display: inline-block;
+}
+
+/*我的收藏*/
+.user-page-myKeeps .info-list{
+    padding: 20px 130px;
+    margin-bottom: 10px;
+}
+div.info-body{
+    width: 550px;
+}
+#user-pic{
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    width: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+#user-pic img{
+    width: 100%;
+    height: 100%;
+}
+.info-content p{
+    text-indent: 2em;
+}
+div.articleType{
+    right: 150px;
+}
+div.info-body .info-opera{
+    padding-bottom:10px;
+}
+/*用户编辑框*/
+#editModal,#editArticleModal,#delModal{
+    z-index: 99999;
+}
+.modal-dialog{
+    margin-top: 80px;
+}
+#editArticleModal .modal-dialog{
+    margin-top: 100px;
+}
+.modal-dialog .brief{
+    height: 90px;
+}
+#editArticleModal .articleContent{
+    height: 120px;
+}
+/*弹出框*/
+.pop-Model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 9998;
+    overflow: scroll;
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+    color: #444;
+    display: none;
+}
+.pop-Model::-webkit-scrollbar{width:0px}
+
+div.edit-box{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 600px;
+    height: 570px;
+    background-color: white;
+    border-radius: 10px;
+}
+div.edit-box .close{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+div.edit-box h2{
+    line-height: 50px;
+    text-align: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+/*上传头像*/
+.upload-Model .edit-box{
+    width: 500px;
+    height: 320px;
+}
+.uploadBody{
+    text-align: center;
+}
+.uploadBody img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.uploadBody a{
+    display: inline-block;
+    position: relative;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.uploadBody a:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.uploadBody input {
+    position: absolute;
+    font-size: 30px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+
+    /*用户信息编辑*/
+.editMessForm div,.editArticleForm div{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.editMessForm label,.editArticleForm label{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20%;
+    line-height: 35px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+}
+.editMessForm input,.editArticleForm input{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 70%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #d5d5d5;
+}
+.editMessForm input[type=radio],.editArticleForm input[type=radio]{
+    height: 15px;
+    width: 15px;
+    margin-top: 0;
+    vertical-align: middle;
+}
+.gender,.type,.whosee{
+    display: inline-block;
+    line-height: 35px;
+    margin-left: 5px;
+    margin-right: 10px;
+    /*vertical-align: top;*/
+}
+.editMessForm .brief{
+    height: 70px;
+}
+
+.brief label,.articleContent label{
+    vertical-align: top;
+    line-height: 16px;
+}
+.brief textarea,.articleContent textarea{
+    width: 70%;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid #d5d5d5;
+}
+
+.opear{
+    text-align: right;
+    border-top: 1px solid #d5d5d5;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.opear button{
+    width: 80px;
+    margin-left: 20px;
+}
+
+/*编辑文章*/
+.editArticle-Model .edit-box{
+    height: 430px;
+}
+.editArticleForm .articleContent{
+    height: 130px;
+}
+.articleContent textarea{
+    height: 130px;
+}
+/*删除文章*/
+.delArticle-Model .delArticle-body h2,.calcelFollow-Model .delArticle-body h2,.calcelKeep-Model .delArticle-body h2{
+    font-size: 22px;
+    border-bottom: none;
+}
+.delArticle-Model .edit-box,.calcelFollow-Model .edit-box,.calcelKeep-Model .edit-box{
+    height: 180px;
+}
+
+/*提示框*/
+div.tipBox{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 100px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bolder;
+    opacity: 0;
+    visibility: hidden;
+}
+div.showTime{
+    -webkit-animation: showAndHidden 1s linear forwards;
+    -moz-animation: showAndHidden 1s linear forwards;
+    -ms-animation: showAndHidden 1s linear forwards;
+    animation: showAndHidden 1s linear forwards;
+}
+/*提示框*/
+@-webkit-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-moz-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@-ms-keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    20%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes showAndHidden{
+    0%{
+        opacity:0;
+        visibility: hidden;
+    }
+    10%{
+        opacity: 1;
+        visibility: visible;
+    }
+    80%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

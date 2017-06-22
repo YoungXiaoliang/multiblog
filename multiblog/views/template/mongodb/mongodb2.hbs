@@ -1,0 +1,1335 @@
+{{#section 'study-page-css'}}
+    <link rel="stylesheet" href="/stylesheets/studyPage/studyPage.css">
+{{/section}}
+
+<section class="study-top">
+    <div class="study-stage">
+        <a href="/mongodb1">入门篇</a>
+        <a href="/mongodb2">进阶篇</a>
+        <a href="/mongodb3">实战篇</a>
+    </div>
+    <h2>MongoDB</h2>
+    <h3>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。</h3>
+</section>
+
+<section class="study-content-box">
+    <h2><span>进阶篇</span></h2>
+    <!--目录-->
+    <nav class="catalog-nav fl scrollEven" >
+        <ul class="tree study-list-first nav" role="tablist">
+            <li class="active catalog-list">
+                <a href="#catalog1" class="catalog-list-name">第1章    初识Express</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-1')">1.1  JavaScript革命</a>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-2')">1.2  初识Express</a>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-3')">1.3  Express简史</a>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-4')">1.4  升级到Express 4.0</a>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-5')">1.5  Node：一种新型Web服务器</a>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog1-6')">1.6  Node的生态系统</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="#catalog2" class="catalog-list-name">第2章   从Node开始</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-1')">2.1  获取Node</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-2')">2.2  使用终端</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-3')">2.3  编辑器</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-4')">2.4  npm</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-5')">2.5  用Node实现的简单Web服务器</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog2-5-1')">2.5.1 Hello World</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog2-5-2')">2.5.2 事件驱动编程</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog2-5-3')">2.5.3 路由</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog2-5-4')">2.5.4 静态资源服务</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog2-6')">2.6  走向Express</a></li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="#catalog3" class="catalog-list-name">第3章 省时省力的Express</a>
+                <ul class="study-list-second">
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog3-1')">3.1 脚手架</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog3-2')">3.2 草地鹨旅行社网站</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog3-3')">3.3 初始步骤</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog3-3-1')">3.3.1 视图和布局</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog3-3-2')">3.3.2 视图和静态文件</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog3-3-3')">3.3.3 视图中的动态内容</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog3-4')">3.4 小结</a></li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="#catalog4" class="catalog-list-name">第4章 工欲善其事，必先利其器</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-1')">4.1 最佳实践</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-2')">4.2 版本控制</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-3')">4.3 针对本书如何使用Git</a>
+                        <ul class="study-list-third">
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog4-3-1')">4.3.1 如果你要自己动手</a></li>
+                            <li><a href="javascript:;" onclick="clickCatalogName('catalog4-3-2')">4.3.2 如果你要使用官方存储库</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-4')">4.4 npm包</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-5')">4.5 项目元数据</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog4-6')">4.6 Node模块</a></li>
+                </ul>
+            </li>
+            <li class="catalog-list">
+                <a href="#catalog5" class="catalog-list-name">第5章 质量保证</a>
+                <ul class="study-list-second" >
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-1')">5.1 QA：值得吗</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-2')">5.2 逻辑与展示</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-3')">5.3 测试的类型</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-4')">5.4 QA技术概览</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-5')">5.5 运行你的服务器</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-6')">5.6 页面测试</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-7')">5.7 跨页测试</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-8')">5.8 逻辑测试</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-9')">5.9 去毛</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-10')">5.10 链接检查</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-11')">5.11 用Grunt实现自动化</a></li>
+                    <li><a href="javascript:;" onclick="clickCatalogName('catalog5-12')">5.12 持续集成</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--章节内容-->
+    <div class="study-content fr">
+        <div class="chapter-box" id="catalog1">
+            <div class="chapter-top">
+                <h2>第1章</h2>
+                <h1>初识Express</h1>
+            </div>
+            <div class="chapter-content">
+                <div class="section-box" id="catalog1-1">
+                    <h3 class="section-top">1.1 JavaScript革命</h3>
+                    <div class="section-content">
+                        <p>JavaScript 的时代真的来临了。最开始它只是一种粗陋的客户端脚本语言，但现在它不仅
+                            是客户端普遍使用的脚本语言，甚至还因为 Node 的出现最终成为了服务器端脚本语言</p>
+                        <p>全部由 JavaScript 组成的技术栈前景非常明朗：不再需要环境切换！你再也不需要从
+                            JavaScript 的思维模式切换到 PHP、C#、Ruby 或 Python（或其他任何服务器端语言）。此
+                            外，它还让前端工程师一跃进入了服务器端编程领域。当然，这并不是说服务器端编程只
+                            和语言有关，仍然有很多东西需要学习。但有了 JavaScript，至少语言不再是障碍了。</p>
+                        <p>2009 年，人们早已经认识到 JavaScript 作为浏览器脚本语言非常强大，具有很强的表现能
+                            力，这时，Ryan Dahl 看到了 JavaScript 作为服务器端语言的潜力，于是 Node 诞生了。这
+                            是一个互联网技术生机勃勃的时代。Ruby（和 RoR）吸收了学院派计算机科学的一些伟大
+                            思想，并结合了自有的一些新想法，推出了一种更快捷的网站及 Web 应用程序构建方式。
+                            微软也通过奋勇作战在互联网时代争得了一席之地，借助 .NET 取得了惊人的成就，它不
+                            仅借鉴了 Ruby 和 JavaScript 的优点，还从 Java 犯的错误中吸取了经验，并充分吸收了学
+                            术殿堂中的精髓。</p>
+                        <p>徜徉在互联网技术中令人感到兴奋，到处都是令人惊奇的新想法（或者复兴的旧思想）。
+                            现在的创新精神和新鲜事物比过去的这许多年要更强、更多。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog1-2">
+                    <h3 class="section-top">1.2 初识Express</h3>
+                    <div class="section-content">
+                        <p>
+                            Express 网站上是这样介绍 Express 的：“精简的、灵活的 Node.js Web 程序框架，为构建单
+                            页、多页及混合的 Web 程序提供了一系列健壮的功能特性。”这究竟是什么意思呢？下面
+                            我们来逐一解读一下。
+                        </p>
+                        <li>精简</li>
+                        <div class="sketch-para">
+                            <p>这是 Express 最吸引人的特性之一。框架开发者经常会忘掉“少即是多”这一基本原
+                                则。Express 的哲学是在你的想法和服务器之间充当薄薄的一层。这并不意味着它不够
+                                健壮，或者没有足够的有用特性，而是尽量少干预你，让你充分表达自己的思想，同时
+                                提供一些有用的东西。</p>
+                        </div>
+                        <li>灵活</li>
+                        <div class="sketch-para">
+                            <p>Express 哲学中的另一个关键点是可扩展。Express 提供了一个非常精简的框架，你可以
+                                根据自己的需要添加 Express 功能中的不同部分，替换掉不能满足需要的部分。这种做
+                                法很新鲜。很多框架把什么都给你了，一行代码还没写，你拥有的就已经是一个臃肿、
+                                神秘而复杂的项目了。通常，你的第一项任务就是把不需要的功能砍掉，或者替换掉不
+                                能满足需求的功能。Express 则采取了截然不同的方式，让你在需要时才去添加东西。</p>
+                        </div>
+                        <li>Web程序框架</li>
+                        <div class="sketch-para">
+                            <p>这里需要琢磨一下语义了。什么是 Web 程序？这意味着 Express 就不能做出网站或者
+                                网页了吗？不，网站是 Web 程序，网页也是 Web 程序。但 Web 程序的含义不止这些，
+                                它还可以向其他 Web 程序提供功能（还有别的）。一般而言，“程序”是具有功能的，
+                                它不止是内容的静态集合（尽管这也是非常简单的 Web 程序）。尽管现在“程序”（在
+                                你的设备本地运行的东西）和“网页”（通过网络为你的设备服务的东西）之间有明显
+                                的界限，但这种界限渐渐变得模糊了，这要感谢 PhoneGap 这样的项目，同时也要感谢
+                                微软允许 HTML5 像本地应用程序一样在桌面上运行。不难想象，几年之内程序和网站
+                                之间的界限将不复存在。</p>
+                        </div>
+                        <li>单页Web程序</li>
+                        <div class="sketch-para">
+                            <p>单页 Web 程序是比较新颖的想法。不像之前的网站，用户每次访问不同的页面都要发
+                                起网络请求，单页 Web 程序把整个网站（或很大一部分）都下载到客户端浏览器上。
+                                经过初始下载后，用户访问不同页面的速度更快了，因为几乎不需要或者只要很少的服
+                                务端通信。单页程序的开发可以使用 Angular 或 Ember 等流行框架，Express 跟它们都
+                                配合得很好。</p>
+                        </div>
+                        <li>多页和混合的Web程序</li>
+                        <div class="sketch-para">
+                            <p>多页 Web 程序是更传统的方式。网站上的每个页面都是通过向服务器发起单独的请求
+                                得到的。这种方式确实比较传统，但这并不意味着它没有优点，或者说单页程序更好。
+                                只是现在有更多选择了，你可以决定哪些内容应该作为单页程序提供，哪些应该通过不
+                                同的请求提供。“混合”说的就是同时使用这两种方式的网站。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog1-3">
+                    <h3 class="section-top">1.3　Express简史</h3>
+                    <div class="section-content">
+                        <p>Express 的缔造者 TJ Holowaychuk 说 Express 是在 Sinatra 的启发下创建的，后者是一个基
+                            于 Ruby 的框架。Express 借鉴一个在 Ruby 上构建的框架并不奇怪：Ruby 致力于让 Web
+                            开发变得更快、更高效、更可维护，并衍生了大量的 Web 开发方式。</p>
+                        <p>除了 Sinatra，Express 跟 Connect 也有非常紧密的联系，Connect 是一个 Node 的“插件”
+                            库。Connect 创造了“中间件”（middleware）这个术语来描述插入式的 Node 模块，它能
+                            在不同程度上处理 Web 请求。在版本 4.0 之前，Express 一直是绑定 Connect 的；在版本
+                            4.0 中，Connect（以及除 static 之外的所有中间件）被去掉了，以便这些中间件可以各自
+                            独立升级。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog1-4">
+                    <h3 class="section-top">1.4　升级到Express 4.0</h3>
+                    <div class="section-content">
+                        <p>如果你用过 Express 3.0，知道可以毫不费力地升级到 Express 4.0 应该会很高兴。如果你刚
+                            接触 Express，可以直接跳过这一节。对于用过 Express 3.0 的读者，请注意以下几个重点。</p>
+                        <div class="sketch-para dot-in-front">
+                            <p>
+                                Connect已经从 Express 中去掉了，所以除了 static 中间件，你需要自己安装相应的开
+                                发包（即 connect ）。与此同时，Connect 将一些中间件移到了它自己的包内，所以你可
+                                能要在 npm 上搜一下，看看你需要的中间件到哪去了。
+                            </p>
+                            <p>body-parser现在有自己的包了，它不再包含 multipart 中间件，因而也关闭了一个重
+                                大的安全漏洞。现在可以放心使用 body-parser 中间件了。</p>
+                            <p>不必再将 Express router 链接到程序里。所以应该从已有的 Express 3.0 中去掉app.
+                                use(app.router)。</p>
+                            <p>app.configure被去掉了，只要检查 app.get(env) （用 switch 或 if 语句）就可以取代
+                                该方法</p>
+                        </div>
+                        <p>更多细节请参阅官方迁移指南（https://github.com/strongloop/express/wiki/Migrating-from-3.
+                            x-to-4.x）。</p>
+                        <p>Express 是一个开源项目，主要还是由 TJ Holowaychuk 开发及维护</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog1-5">
+                    <h3 class="section-top">1.5　Node：一种新型Web服务器</h3>
+                    <div class="section-content">
+                        <p>从某种角度看，Node 跟其他流行的 Web 服务器，比如微软的互联网信息服务（IIS）或
+                            Apache，有很多共同点。然而更有趣的是探究它的不同之处，所以我们先从讨论它的不同
+                            开始。</p>
+                        <p>Node 实现 Web 服务器的方式跟 Express 很像，也非常精简。Node 的搭建和配置非常容易，
+                            不像 IIS 或 Apache 要花费多年的时间才能掌握。但要让 Node 服务器在生产环境中发挥出</p>
+                        <p>最优性能，进行调优也绝非易事，只不过是配置选项更简单，也更直接了。</p>
+                        <p>Node 和传统的 Web 服务器之间的另一个主要区别是：Node 是单线程的。乍一看可能觉得
+                            这是一种倒退。但事实证明，这是天才之举。单线程极大地简化了 Web 程序的编写，如
+                            果你需要多线程程序的性能，只需启用更多的 Node 实例，就可以得到多线程的性能优势。
+                            精明的读者可能会觉得我这是在放烟幕弹。毕竟，通过服务器并行（相对于程序的并行）
+                            的多线程只是把复杂性转移了，并没有消除它啊？也许吧，但依我之见，它是把复杂性放
+                            到了它应该存在的地方。更进一步说，随着云计算的日益流行，以及将服务器当作普通商
+                            品看待的趋势越来越明显，这种方式也变得更有意义了。IIS 和 Apahce 确实强大，并且它
+                            们的设计目标也是要榨取如今强大的硬件设施的最后一点性能。但那是需要付出代价的，
+                            即它需要相当专业的设置和调优才能榨取那种性能。</p>
+                        <p>至于编写程序的方式，相较于 .NET 或 Java 程序，Node 程序更像 PHP 或 Ruby。尽管
+                            Node 所用的 JavaScript 引擎（谷歌的 V8）确实会将 JavaScript 编译为本地机器码（更像
+                            C 或 C++），但这一操作是透明的
+                            1 ，所以从用户的角度来看，它表现的还是像纯粹的解释
+                            型语言一样。没有单独的编译步骤，这减少了维护和部署的麻烦。你所要做的只是更新
+                            JavaScript 文件，然后你的修改就自动生效了。</p>
+                        <p>Node 程序的另一个好处是它的平台无关性。它不是第一个或唯一的平台无关的服务器技
+                            术，但平台无关的水平真的是良莠不齐。例如，你可以借助 Mono 在 Linux 上运行 .NET
+                            程序，但这个过程会很痛苦。同样，你可以在 Windows 服务器上运行 PHP 程序，但一般
+                            不像在 Linux 机器上设置那么容易。另一方面，在所有主流操作系统（Windows、OS X 和
+                            Linux）上设置 Node 都易如反掌，并且协作也很容易。在网站设计团队中，经常会同时出
+                            现 PC 和 Mac。某些平台，比如 .NET，对经常使用 Mac 的前端开发人员和设计师来说是
+                            个挑战，会极大地影响协作性和工作效率。用几分钟（甚至几秒钟）的时间在任意一个操
+                            作系统上构建一个可运行服务器的梦想终于实现了。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog1-6">
+                    <h3 class="section-top">1.6　Node的生态系统</h3>
+                    <div class="section-content">
+                        <p>当然，Node 处于这个技术栈的核心位置。就是它让 JavaScript 从浏览器中分离出来，得以
+                            在服务器上运行，进而可以使用 JavaScript 写成的框架（比如 Express）。另外一个重要的
+                            组件是数据库，这将在第 13 章中进行详细介绍。除了最简单的 Web 程序，所有的程序都
+                            需要数据库，并且 Node 生态系统中的数据库更多。</p>
+                        <p>所有主流关系型数据库（MySQL、MariaDB、PostgreSQL、Oracle、SQL Server）的接口都
+                            有，这一点并不奇怪，因为忽视那些已经成熟的“巨无霸”太不明智了。然而 Node 开发
+                            的出现带动了一种新式的数据库存储方式，这种方式被称为“NoSQL 数据库”。用否定的</p>
+                        <p>方式来下定义有时并不恰当，所以我们更准确地称之为“文档数据库”或“键 / 值对数据
+                            库”。它们提供了一种概念上更简单的数据存储方式。这种数据库有很多，但 MongoDB 是
+                            其中的佼佼者，也是我们要在本书中使用的数据库。</p>
+                        <p>因为构建一个功能性网站要借助很多种技术，因此衍生了一种用来描述网站构建基础“技
+                            术栈”的缩略语。比如说，Linux、Apache、MySQL 和 PHP 被称为 LAMP 栈。MongoDB
+                            的工程师 Valeri Karpov 发明了一个缩略语 MEAN，指代 Mongo、Express、Angular 和
+                            Node。尽管它确实朗朗上口，却有其局限性：可选的数据库和应用程序框架有很多，
+                            MEAN 无法体现这个生态系统的多样性（它还漏掉了一个我认为非常重要的组件：模板
+                            引擎）。</p>
+                        <p>发明一个兼容并包的缩略语是一个有趣的事情。其中无可替代的组件当然是 Node。尽管
+                            还有其他的服务器端 JavaScript 容器，但 Node 是其中的执牛耳者。尽管 Express 在主导地
+                            位上接近 Node，但它也不是唯一可用的 Web 程序框架。另外两个通常来说对 Web 程序开
+                            发必不可少的组件是数据库服务器和模板引擎（模板引擎提供了 PHP、JSP 或 Razor 自带
+                            的功能：将代码和标记输出无缝结合起来）。对于最后两种组件而言，没有明显的领跑者，
+                            我认为对此加以限制有害无益。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chapter-box" id="catalog2">
+            <div class="chapter-top">
+                <h2>第2章</h2>
+                <h1>从Node开始</h1>
+            </div>
+            <div class="chapter-content">
+                <div class="section-box" id="catalog2-1">
+                    <p>如果你从来没接触过 Node，这一章就是为你而准备的。掌握 Express 及其实用性需要对
+                        Node 有基本的认识。如果你用 Node 开发过 Web 程序，则可以跳过本章。在本章中，我
+                        们会用 Node 构建一个非常小的 Web 服务器，然后在下一章中介绍如何用 Express 完成相
+                        同的任务。</p>
+                    <h3 class="section-top">2.1　获取Node</h3>
+                    <div class="section-content">
+                        <p>在系统上安装 Node 非常简单。Node 团队做了很多努力，以确保在所有主流平台上都能简
+                            单直接地安装 Node。</p>
+                        <p>安装过程非常简单，实际上，它可以总结为以下三个简单的步骤：</p>
+                        <div class="example-para">
+                            <p>(1) 进入 Node 的首页（http://nodejs.org）。</p>
+                            <p>(2) 点击写着“INSTALL”的绿色大按钮。</p>
+                            <p>(3) 按照指令安装。</p>
+                        </div>
+                        <p>在 Windows 和 OS X 上，会下载一个安装器，引导你完成整个安装过程。在 Linux 上，如
+                            果你用了包管理器（https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager），
+                            可能会更快地完成安装并运行。</p>
+                        <p class="tip-para">
+                            如果你是 Linux 用户，并且要用包管理器，一定要遵循之前提到的网页上的
+                            指令。如果你不加上恰当的包存储库，很多 Linux 发行版都会安装一个非常
+                            古老的 Node 版本。
+                        </p>
+                        <p>
+                            你也可以下载一个独立的安装器（http://nodejs.org/download/），在你向组织内部分发 Node
+                            时会有帮助。
+                        </p>
+                        <p>如果你在构建 Node 时遇到困难，或者因为某些原因想从头开始构建 Node，请参考官方安
+                            装指南（http://www.joyent.com/blog/installing-node-and-npm/）。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog2-2">
+                    <h3 class="section-top">2.2　使用终端</h3>
+                    <div class="section-content">
+                        <p>我痴迷于终端（也叫“控制台”或“命令行”）的强大和高效。本书的所有例子都假定你
+                            已使用终端。如果你不熟悉你的终端，我强烈建议你花些时间去熟悉它。本书中的很多工
+                            具都有 GUI 界面，所以如果你确实不想使用终端，你有自己的选择权，但你就只能靠自己
+                            去学习了。</p>
+                        <p>如果你用的是 OS X 或 Linux，有大量历史悠久的 shell（终端命令解释器）可供选择。尽
+                            管 zsh 也有它自己的追随者，但目前最流行的还是 bash。我之所以被 bash 吸引，（除了接
+                            触时间长之外）主要是因为它的普遍性。在基于 Unix 的机器上，默认的 shell 有 99% 的可
+                            能是 bash。</p>
+                        <p>如果你是 Windows 用户，事情就没有那么美好了。微软从不注重在终端上提供令人愉悦
+                            的体验，所以你只能多做点工作。Git 中包含一个“Git bash” shell，提供了类似于 Unix 的
+                            终端体验（它只有常见 Unix 命令行工具的一个子集，但这个子集很实用）。尽管 Git bash
+                            提供了一个精简的 bash shell，但它用的仍然是内置的 Windows 控制台程序，因此用起来
+                            也比较费力（即便像重置控制台窗口大小、选择文本、剪切和粘帖这些简单的功能都是不
+                            直观和笨拙的）。因此我推荐你安装 Console2（http://sourceforge.net/projects/console/）或
+                            ConEmu（https://github.com/Maximus5/ConEmu）这些更精致的控制台。对于 Windows 的
+                            超级用户，特别是 Windows 系统的 .NET 开发人员，或者骨灰级 Windows 系统和网络的
+                            管理员，还有另外一个选择：微软自己的 PowerShell。PowerShell 名符其实，人们可以用
+                            它做出非凡的事情，并且技艺娴熟的 PowerShell 用户跟 Unix 命令行大师旗鼓相当。然而，
+                            如果你要在 OS X/Linux 和 Windows 之间切换，出于一致性上的考虑，我建议你还是用 Git
+                            bash 吧。</p>
+                        <p>Windows 用户还有一种选择：虚拟化。因为现代计算机的架构和能力，虚拟机（VM）的
+                            性能实际上已经足以媲美真正的机器了。我们非常幸运能有 Oracle 的免费 VirtualBox，并
+                            且 Windows 8 内置了对 VM 的支持。另外，有了像 Dropbox 这样基于云的文件存储，并
+                            且 VM 存储和主机存储之间的桥接也很容易，虚拟化更加有吸引力了。与其用 Git bash 给
+                            Windows 羸弱的控制台支持打补丁，还不如用 Linux VM 做开发。如果你觉得 UI 不像你
+                            想象的那么平滑，可以使用像 PuTTY（http://www.putty.org/）这样的终端程序，我经常这
+                            么做。</p>
+                        <p>最后，不管你用什么系统，都可以使用优秀的 Codio（https://codio.com/）。Codio 是个网
+                            站，它可以为你的每个项目起一个新的 Linux 实例，还可以提供一个 IDE 和命令行，并且
+                            Node 也已经安装完毕。它真的非常好用，是快速进入 Node 的极佳方式。</p>
+                        <p class="tip-para">
+                            如果你在安装 npm 包时指定 -g （全局）选项，它们会被装在你的 Windows
+                            主目录的一个子目录下。我发现如果你的用户名中有空格（我的用户名过去
+                            是“Ethan Brown”，现在是“ethan.brown”），很多包都会出现问题。出于安
+                            全考虑，我建议你选一个没有空格的 Windows 用户名。如果你已经用带有空
+                            格的用户名了，建议你创建一个新用户，然后将你的文件传给新账号。重命
+                            名你的 Windows 主目录也不是不可能，但充满了危险。
+                        </p>
+                        <p>一旦你选定了自己喜欢的 shell，建议你花些时间熟悉一下与它相关的基础知识。网上有很
+                            多精彩的教程，你现在应该学习一下，毕竟磨刀不误砍柴工。至少你应该知道如何切换目
+                            录，如何复制、移动和删除文件，以及如何中断一个命令行程序（通常是 Ctrl-C）。如果你
+                            想变成终端高手，我建议你学一学如何在文件中搜索文本，如何搜索文件和目录，如何把
+                            命令链在一起（老式的“Unix 理念”），以及如何重定向输出。</p>
+                        <p class="tip-para">在很多类 Unix 的系统上，Ctrl-S 都有特殊的含义：它会“冻结”终端（它曾
+                            经被用来暂停快速滚动）。因为“保存”一般也是用这个快捷键，所以经常
+                            会有人不假思索地按下这个快捷键，结果大多数人都会被搞糊涂（我也经常
+                            犯这个错误）。解冻终端是用 Ctrl-Q，所以如果你忽然发觉终端看起来被冻
+                            结了，试一下 Ctrl-Q，看能不能释放它。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog2-3">
+                    <h3 class="section-top">2.3　编辑器</h3>
+                    <div class="section-content">
+                        <p>很少有话题能像选择编辑器一样在程序员中引起热烈的讨论，其中缘由便是：编辑器是
+                            最主要的工具。我用的编辑器是 vi 1 （或者带 vi 模式的编辑器）。并非所有人都喜欢使用 vi
+                            （当我告诉同事用 vi 多么容易实现他们在做的事情时，总是会招致他们的白眼），但找一
+                            款强大的编辑器并学会如何使用它无疑会极大地提高你的生产率，并且你会享受到个中趣
+                            味。我特别喜欢 vi 的原因之一（尽管谈不上是最重要的原因）是它跟 bash 一样，也是普
+                            遍存在的。只要你访问 Unix 系统（包括 Cygwin），就能找到 vi。很多流行的编辑器（即
+                            便是微软的 Visual Studio ！）都有 vi 模式。一旦你习惯了 vi，很难想象还会用其他的编辑
+                            器。刚开始接触 vi 时会觉得比较难，但回报是很可观的</p>
+                        <p>尽管知道控制台编辑器（比如 vi 或 Emacs）可以变得极其方便顺手，你或许还是想要一
+                            个更现代化的编辑器。我一些做前端的同事喜欢 Coda，我相信他们的选择。可惜 Coda 只
+                            能用在 OS X 上。Sublime Text 是一个强大的现代化编辑器，也有出色的 vi 模式，并且在
+                            Windows、Linux 和 OS X 上都能使用。</p>
+                        <p>Windows 上还有一些很好的免费选择。TextPad 和 Notepad++ 都有它们的支持者。它们都
+                            是很强的编辑器，并且你无法抗拒它们的价格诱惑。如果你是 Windows 用户，不要忽视将
+                            Visual Studio 作为 JavaScript 编辑器：它非常地强大，并且它的 JavaScript 自动补足引擎可
+                            以称得上是最好的。你可以在微软的官网上免费下载 Visual Studio Express。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog2-4">
+                    <h3 class="section-top">2.4　npm</h3>
+                    <div class="section-content">
+                        <p>npm 是随处可见的 Node 开发包管理器（我们就是用它获取并安装 Express 的）。“npm”跟
+                            PHP、GNU、WINE 等那些古怪的传统名字不一样，它不是首字母缩写（所以也没有大
+                            写），而是“npm 不是缩写”的递归缩写。</p>
+                        <p>从广义上来说，包管理器的两个主要职责是安装开发包和管理依赖项。npm 是一个快速、
+                            高能并且毫不费力的包管理器，在 Node 生态系统的高速成长和多样化过程中发挥了重要
+                            作用。</p>
+                        <p>当你安装 Node 时就把 npm 装上了，所以如果你是按照前面列出来的步骤安装的 Node，你
+                            已经有 npm 了。那么我们开始工作吧！</p>
+                        <p>在使用 npm 时，（毫无悬念）最主要的命令是 install 。比如要安装 Grunt（一个流行的
+                            JavaScript 任务执行器），你将会（在控制台里）发起下面这个命令：</p>
+                        <pre class="code-para"><ol><li><span>npm install -g grunt-cli</span></li></ol></pre>
+                        <p>标记 -g 的意思是告诉 npm 这个包要全局安装，即系统全局都可以访问它。在我们讨论
+                            package.json 文件时，这种区别会更明显。就目前而言，JavaScript 工具（比如 Grunt）一
+                            般是全局安装的，但你的 Web 程序或项目专用的开发包则不是。</p>
+                        <p class="tip-para">不像 Python 语言——从 2.0 升级到 3.0 发生了重大变化，有必要提供一种
+                            在不同环境中切换的办法——Node 平台太新了，你很可能总是用最新版的
+                            Node。然而，如果你发现自己确实需要支持多个版本的 Node，有个 nvm
+                            （https://github.com/creationix/nvm）项目，可以用它切换环境。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog2-5">
+                    <h3 class="section-top">2.5　用Node实现的简单Web服务器</h3>
+                    <div class="section-content">
+                        <p>如果你之前曾经做过静态的 HTML 网站，或者有 PHP 或 ASP 背景，可能习惯用 Web 服务
+                            器（比如 Apache 或 IIS）提供静态文件服务，以便使用浏览器通过网络查看这些文件。比
+                            如说，如果你创建了一个名为 about.html 的文件，并把它放到了恰当的目录下，然后就可
+                            以访问 http://localhost/about.html 查看这个文件。根据 Web 服务器的配置，你甚至可以省
+                            略 .html，但 URL 和文件名之间的关系很清晰：Web 服务器知道文件在机器的哪个地方，
+                            并能把它返回给浏览器。</p>
+                        <p class="tip-para">从 localhost 的名字就能看出来，它指的是你所在的机器。这是 IPv4 回环地
+                            址 127.0.0.1 或者 IPv6 回环地址 ::1 的常用别名。你应该更常见到 127.0.0.1，
+                            不过本书中用的是 localhost。如果你用的是远程的机器（比如通过 SSH 访问
+                            的），记得浏览 localhost 时访问的不是你眼前的那台机器。</p>
+                        <p>Node 所提供的范式跟传统的 Web 服务器不同：你写的程序就是 Web 服务器。Node 只是
+                            给你提供了一个构建 Web 服务器的框架。</p>
+                        <p>你可能会说“但我不想写 Web 服务器”。这是很自然的反应：你想写一个程序，而不是
+                            Web 服务器。然而在 Node 里编写 Web 服务器非常简单（甚至只需要几行代码），并且你
+                            因此取得了对程序的控制权，这是非常值得的。</p>
+                        <div class="lesson-box" id="catalog2-5-1">
+                            <h5 class="lesson-top">2.5.1　Hello World</h5>
+                            <p>我发现正规的编程入门范例总是输出毫无创意的“Hello World”消息。但打破这样的传统
+                                似乎是不敬之举，所以我们也从这里开始吧，然后再去做一些更有趣的事情。</p>
+                            <p>用你喜欢的编辑器创建一个 helloWorld.js 文件：</p>
+                            <pre class="code-para"><ol><li><span>var http = require('http');</span></li><br><li><span>http.createServer(function(req,res){</span></li><li><span>    res.writeHead(200, { 'Content-Type': 'text/plain' });</span></li><li><span>    res.end('Hello world!');</span></li><li><span>}).listen(3000);</span></li><br><li><span>console.log('Server started on localhost:3000; press Ctrl-C to terminate....');</span></li></ol></pre>
+                            <p>确保是和 helloWorld.js 在同一个目录下，输入 node hello World.js 。然后打开浏览器访问
+                                http://localhost:3000，你的第一个 Web 服务器就建成啦！这个服务器并没有返回 HTML，
+                                而只是向你的浏览器传递了一条普通的文本消息“Hello world!”。如果你想要尝试发送HTML，可以试验一下：只要把 text/plain 换成 text/html ，再把 'Hello world!' 换成一
+                                个包含有效 HTML 的字符串就行了。在这里就不演示了，因为我要尽量避免在 JavaScript
+                                里写 HTML，至于原因，我们会在第 7 章深入探讨</p>
+                        </div>
+                        <div class="lesson-box" id="catalog2-5-2">
+                            <h5 class="lesson-top">2.5.2　事件驱动编程</h5>
+                            <p>Node 的核心理念是事件驱动编程。这对程序员来说，意味着你必须知道有哪些事件，以
+                                及如何响应这些事件。很多人接触事件驱动编程是从用户界面开始的：用户点击了什么，
+                                然后你处理“点击事件”。这个类比很好，因为程序员不能控制用户什么时间点击或者是
+                                否会点击，所以事件驱动编程真的很直观。在服务器上响应事件这种概念性的跳跃可能会
+                                比较难，但原理是一样的。</p>
+                            <p>在前面那个例子中，事件是隐含的：HTTP 请求就是要处理的事件。 http.createServer 方
+                                法将函数作为一个参数，每次有 HTTP 请求发送过来就会调用那个函数。我们这个简单的
+                                程序只是把内容类型设为普通文本，并发送字符串“Hello world!”。</p>
+                        </div>
+                        <div class="lesson-box" id="catalog2-5-3">
+                            <h5 class="lesson-top">2.5.3　路由</h5>
+                            <p>路由是指向客户端提供它所发出的请求内容的机制。对基于 Web 的客户端 / 服务器端程序
+                                而言，客户端在 URL 中指明它想要的内容，具体来说就是路径和查询字符串（第 6 章会
+                                详细讲解 URL 的组成部分）。</p>
+                            <p>我们扩展一下“Hello world!”那个例子，做些更有意思的事情。做一个有首页、关于页面
+                                和未找到页面的极其简单的网站。目前我们还像之前那个例子一样，不提供 HTML，只提
+                                供普通文本：</p>
+                            <pre class="code-para"><ol><li><span>var http = require('http');</span></li><br><li><span>http.createServer(function(req,res){</span></li><li><span>  // 规范化 url，去掉查询字符串、可选的反斜杠，并把它变成小写</span></li><li><span>  var path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase();</span></li><li><span>  switch(path) {</span></li><li><span>      case '':</span></li><li><span>          res.writeHead(200, { 'Content-Type': 'text/plain' });</span></li><li><span>          res.end('Homepage');</span></li><li><span>          break;</span></li><li><span>      case '/about':</span></li><li><span>          res.writeHead(200, { 'Content-Type': 'text/plain' });</span></li><li><span>          res.end('About');</span></li><li><span>          break;</span></li><li><span>      default:</span></li><li><span>          res.writeHead(404, { 'Content-Type': 'text/plain' });</span></li><li><span>          res.end('Not Found');</span></li><li><span>          break;</span></li><li><span>    }</span></li><li><span>}).listen(3000);</span></li><br><li><span>console.log('Server started on localhost:3000; press Ctrl-C to terminate....');</span></li></ol></pre>
+                            <p>运行这段代码，你会发现现在你可以访问首页 （http://localhost: 3000）和关于页面（http://
+                                localhost:3000/about）。所有查询字符串都会被忽略（所以 http://localhost:3000/?foo=bar 也
+                                是返回首页），并且其他所有 URL（http://localhost:3000/foo）返回的都是未找到页面。</p>
+                        </div>
+                        <div class="lesson-box" id="catalog2-5-4">
+                            <h5 class="lesson-top">2.5.4　静态资源服务</h5>
+                            <p class="tip-para">用 Node 提供静态资源只适用于初期的小型项目，对于比较大的项目，你应
+                                该会想用 Nginx 或 CDN 之类的代理服务器来提供静态资源。对此，第 16 章
+                                会有更多介绍。</p>
+                            <p>如果你用过 Apache 或 IIS，可能习惯于只是创建一个 HTML 文件，访问它，然后让它自动
+                                发送到客户端。Node 不是那样的：我们必须打开文件，读取其中的内容，然后将这些内容
+                                发送给浏览器。所以我们要在项目里创建一个名为 public 的目录（在下一章中，你就会明白
+                                我们为什么不管它叫 static）。在这个目录下创建文件 home.html、about.html、notfound.html，
+                                子目录 img，以及一个名为 img/logo.jpg 的图片。以上这些工作就由你自己来完成了：既然
+                                你在阅读这本书，那么你应该知道怎么编写 HTML 文件和找张图片。在你的 HTML 文件中
+                                这样引用 logo： &lt;<span>img href="/img/logo.jpg" alt="logo"</span>&gt; 。</p>
+                            <p>接下来修改 helloWorld.js：</p>
+                            <pre class="code-para"><ol><li><span>var http = require('http'),</span></li><li><span>  fs = require('fs');</span></li><br><li><span>function serveStaticFile(res, path, contentType, responseCode) {</span></li><li><span>  if(!responseCode) responseCode = 200;</span></li><li><span>  fs.readFile(__dirname + path, function(err,data) {</span></li><li><span>      if(err) {</span></li><li><span>          res.writeHead(500, { 'Content-Type': 'text/plain' });</span></li><li><span>          res.end('500 - Internal Error');</span></li><li><span>      } else {</span></li><li><span>          res.writeHead(responseCode,</span></li><li><span>              { 'Content-Type': contentType });</span></li><li><span>          res.end(data);</span></li><li><span>      }</span></li><li><span>  });</span></li><li><span>}</span></li><br><li><span>http.createServer(function(req,res){</span></li><li><span>  // 规范化 url，去掉查询字符串、可选的反斜杠，并把它变成小写</span></li><li><span>  var path = req.url.replace(/\/?(?:\?.*)?$/, '')</span></li><li><span>      .toLowerCase();</span></li><li><span>  switch(path) {</span></li><li><span>      case '':</span></li><li><span>          serveStaticFile(res, '/public/home.html', 'text/html');</span></li><li><span>          break;</span></li><li><span>      case '/about':</span></li><li><span>          serveStaticFile(res, '/public/about.html', 'text/html');</span></li><li><span>          break;</span></li><li><span>      case '/img/logo.jpg':</span></li><li><span>          serveStaticFile(res, '/public/img/logo.jpg','image/jpeg');</span></li><li><span>          break;</span></li><li><span>      default:</span></li><li><span>          serveStaticFile(res, '/public/404.html', 'text/html',404);</span></li><li><span>          break;</span></li><li><span>  }</span></li><li><span>}).listen(3000);</span></li><br><li><span>console.log('Server started on localhost:3000; press Ctrl-C to terminate....');</span></li></ol></pre>
+                            <p class="tip-para">这 个 例 子 中， 我 们 的 路 由 是 非 常 缺 乏 想 象 力 的。 如 果 你 访 问 http://
+                                localhost:3000/about，就返回 public/about.html 文件。你可以随意修改路由，
+                                也可以随意修改文件。比如说，如果你一周里的每一天都要换一个关于页
+                                面，你可能会有 public/about_mon.html、public/about_tue.html 等之类的页面，
+                                在你的路由中定义好逻辑，从而在用户访问 http://localhost:3000/about 时能提
+                                供恰当的页面。</p>
+                            <p>注意，我们创建了一个辅助函数 serveStaticFile ，它完成了大部分工作。 fs.readFile 是
+                                读取文件的异步方法。这个函数有同步版本， fs.readFileSync ，但这种异步思考问题的方
+                                式，你接触得越早越好。这个函数不复杂：它调用 fs.readFile 读取指定文件中的内容。
+                                fs.readFile 读取完文件后执行回调函数，如果文件不存在，或者读取文件时遇到许可权
+                                限方面的问题，会设定 err 变量，并且会返回一个 HTTP 500 的状态码表明服务器错误。
+                                如果文件读取成功，文件会带着特定的响应码和内容类型发给客户端。第 6 章还会详细讨
+                                论响应码。</p>
+                            <p class="tip-para">__dirname 会被解析为正在执行的脚本所在的目录。所以如果你的脚本放在
+                                /home/sites/app.js 中，则 __dirname 会被解析为 /home/sites 。不管什么时
+                                候，这个全局变量用起来都很方便。如果不这么做，在不同的目录中运行你
+                                的程序时很可能会出现难以诊断的错误。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog2-6">
+                    <h3 class="section-top" >2.6 走向Express</h3>
+                    <div class="section-content">
+                        <p>到目前为止，Node 貌似没什么能打动你的地方。我们基本上是在重复 Apache 或 IIS 可自
+                            动完成的工作，但现在你已经了解了 Node 是如何工作的，也知道你拥有多少控制权。我
+                            们还没做出特别值得称道的事情，但可预见到我们可将它作为跳板去完成更加复杂的事
+                            情。如果我们沿着这条路走下去，写出越来越复杂的 Node 程序，最后你可能会得到一个
+                            类似于 Express 的东西……</p>
+                        <p>幸运的是，我们没必要这样做，因为 Express 已经存在了，你不用自己花那么多时间去写
+                            基础设施类的代码。既然现在已经掌握了一点 Node 方面的知识，那么让我们准备学习
+                            Express 吧。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chapter-box" id="catalog3">
+            <div class="chapter-top">
+                <h2>第3章</h2>
+                <h1>省时省力的Express</h1>
+            </div>
+            <div class="chapter-content">
+                <p>第 2 章介绍了如何用 Node 创建一个简单的 Web 服务器，本章会用 Express 再次创建该服
+                    务器。本章是本书后续内容的起点，会介绍 Express 的基础内容。</p>
+                <div class="section-box" id="catalog3-1">
+                    <h3 class="section-top">3.1 脚手架</h3>
+                    <div class="section-content">
+                        <p>脚手架并不是一个新想法，但很多人（包括我自己）都是通过 Ruby 才接触到这个概念的。
+                            这个想法很简单：大多数项目都需要一定数量的“套路化”代码，谁会想每次开始新项目
+                            时都重新写一次这些代码呢？对此有个简单的方法，那就是创建一个通用的项目骨架，每
+                            次开始新项目时，只需复制这个骨架，或者说是模板。</p>
+                        <p>RoR 把这个概念向前推进了一步，它提供了一个可以自动生成脚手架的程序。相对于从一
+                            堆模板中作出选择，这种方式的优点是可以生成更复杂的框架。</p>
+                        <p>Express 借鉴了 RoR 的这一做法，提供了一个生成脚手架的工具，从而可以让你开始一个
+                            新的 Express 项目。</p>
+                        <p>尽管 Express 有可用的脚手架工具，但它目前并不能生成我在本书中推荐使用的框架。特
+                            别是它不支持我所选择的模板语言（Handlebars），也没有遵循我所偏好的命名规则（尽管
+                            这很容易解决）。</p>
+                        <p>尽管我们不用这个脚手架工具，但我还是建议你在读完本书后看一下它：到那时，你就能
+                            够充分了解它生成的脚手架是否对你有用了。</p>
+                        <p>套路化对最终发送到客户端的真正 HTML 也是有用的。我推荐非常出色的 HTML5Boilerplate（http://html5boilerplate.com/），它能生成一个很不错的空白 HTML5 网站。最近
+                            HTML5 Boilerplate 又新增加了可定制的功能，其中一个定制选项包含 Twitter Bootstrap，
+                            这个是我高度推荐的前端框架。在第 7 章，我们会用一个基于 Bootstrap 的版本创建一个响
+                            应式的现代化 HTML5 网站</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog3-2">
+                    <h3 class="section-top">3.2 草地鹨旅行社网站</h3>
+                    <div class="section-content">
+                        <p>本书以一个可运行的网站为例：假想的草地鹨旅行社网站，该旅行社是一家为到俄勒冈州
+                            旅游的人提供服务的公司。如果你对创建 REST 应用程序更感兴趣，不用担心，因为草地
+                            鹨旅行社网站除了作为功能性网站外，也提供 REST 服务。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog3-3">
+                    <h3 class="section-top">3.3 初始步骤</h3>
+                    <div class="section-content">
+                        <p>先给你的项目创建一个新目录，这将作为项目的根目录。本书中，凡提到“项目目
+                            录”“程序目录”或“项目根路径”，指的都是这个目录。</p>
+                        <p class="tip-para">或许你会把 Web 程序文件跟项目相关的其他文件全都分开存放，比如会议纪
+                            要、文档等。因此，我建议你把项目根路径作为项目目录的子目录。比如，
+                            对于草地鹨旅行社网站而言，我会把项目放在 ~/projects/meadowlark，而项
+                            目根路径放在 ~/projects/meadowlark/site。</p>
+                        <p>npm 在 package.json 文件中管理项目的依赖项以及项目的元数据。要创建这个文件，最简
+                            单的办法是运行 npm init ：它会问一系列的问题，然后为你生成一个 package.json 文件帮
+                            你起步（对于“入口点”的问题，用 meadowlark.js 或项目的名字作为答案）。</p>
+                        <p class="tip-para">如果你的 package.json 文件中没有指定一个存储库的 URL，以及一个非空
+                            的 README.md 文件，那么你每次运行 npm 时都会看到警告信息。package.
+                            json 文件中的元数据只有在发布到 npm 存储库时才是真正必要的，但为了消
+                            除 npm 的警告信息，做这些工作依然是值得的。</p>
+                        <p>第一步是安装 Express。运行下面这条 npm 命令：</p>
+                        <pre class="code-para"><ol><li><span>npm install --save express</span></li></ol></pre>
+                        <p>运行 npm install 会把指定名称的包安装到 node_modules 目录下。如果你用了 --save 选
+                            项，它还会更新 package.json 文件。因为 node_modules 随时都可以用 npm 重新生成，所以
+                            我们不会把这个目录保存在我们的代码库中。为了确保不把它添加到代码库中， 我们可以
+                            创建一个 .gitignore 文件：</p>
+
+                        <pre class="code-para"><ol><li><span># ignore packages installed by npm</span></li><li><span>node_modules</span></li><br><li><span># put any other files you don't want to check in here,</span></li><li><span># such as .DS_Store (OSX), *.bak, etc.</span></li></ol></pre>
+                        <p>接下来创建 meadowlark.js 文件，这是我们项目的入口。本书中将这个文件简单称为“程序
+                            文件”：</p>
+                        <pre class="class-code"><ol><li><span>var express = require('express');</span></li><br><li><span>var app = express();</span></li><br><li><span>app.set('port', process.env.PORT || 3000);</span></li><br><li><span>// 定制 404 页面</span></li><li><span>app.use(function(req, res){</span></li><li><span>  res.type('text/plain');</span></li><li><span>  res.status(404);</span></li><li><span>  res.send('404 - Not Found');</span></li><li><span>});</span></li><br><li><span>// 定制 500 页面</span></li><li><span>app.use(function(err, req, res, next){</span></li><li><span>  console.error(err.stack);</span></li><li><span>  res.type('text/plain');</span></li><li><span>  res.status(500);</span></li><li><span>  res.send('500 - Server Error');</span></li><li><span>});</span></li><br><li><span>app.listen(app.get('port'), function(){</span></li><li><span>  console.log( 'Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.' );</span></li><li><span>});</span></li></ol></pre>
+                        <p class="tip-para">很多教程，甚至是 Express 的脚手架生成器会建议你把主文件命名为 app.js
+                            （或者有时是 index.js 或 server.js）。除非你用的托管服务或部署系统对程序主
+                            文件的名称有特定的要求，否则我认为这么做是没有道理的，我更倾向于按
+                            照项目命名主文件。凡是曾在编辑器里见过一堆 index.html 标签的人都会立
+                            刻明白这样做的好处。 npm init 默认是用 index.js，如果要使用其他的主文
+                            件名，要记得修改 package.json 文件中的 main 属性。</p>
+                        <p>现在你有了一个非常精简的 Express 服务器。你可以启动这个服务器（node meadowlark.
+                            js），然后访问 http://localhost:3000。结果可能会让你失望，因为你还没给 Express 任何路由
+                            信息，所以它会返回一个 404 页面，表示你访问的页面不存在。</p>
+                        <p class="tip-para">注意我们指定程序端口的方式： app.set(port, process.env.PORT || 3000) 。
+                            这样我们可以在启动服务器前通过设置环境变量覆盖端口。如果你在运行这
+                            个案例时发现它监听的不是 3000 端口，检查一下是否设置了环境变量 PORT 。</p>
+                        <p class="tip-para">我高度推荐你安装一个能显示 HTTP 请求状态码和所有重定向的浏览器插
+                            件。这样在解决重定向问题或者不正确的状态码时会更加容易，它们经常被
+                            忽视。对于 Chrome 来说，Ayima 的 Redirect Path 特别好用。在大多数浏览
+                            器中， 都能在开发者工具的网络部分看到状态码。</p>
+                        <p>我们来给首页和关于页面加上路由。在 404 处理器之前加上两个新路由：</p>
+                        <pre class="code-para"><ol><li><span>app.get('/', function(req, res){</span></li><li><span>  res.type('text/plain');</span></li><li><span>  res.send('Meadowlark Travel');</span></li><li><span>});</span></li><li><span>app.get('/about', function(req, res){</span></li><li><span>  res.type('text/plain');</span></li><li><span>  res.send('About Meadowlark Travel');</span></li><li><span>});</span></li><li><span>// 定制 404 页面</span></li><li><span>app.use(function(req, res, next){</span></li><li><span>  res.type('text/plain');</span></li><li><span>  res.status(404);</span></li><li><span>  res.send('404 - Not Found');</span></li><li><span>});</span></li></ol></pre>
+                        <p>app.get 是我们添加路由的方法。在 Express 文档中写的是 app.VERB 。这并不意味着存在一
+                            个叫 VERB 的方法，它是用来指代 HTTP 动词的（最常见的是“get” 和“post”）。这个方法
+                            有两个参数：一个路径和一个函数。</p>
+                        <p>路由就是由这个路径定义的。 app.VERB 帮我们做了很多工作：它默认忽略了大小写或反
+                            斜杠，并且在进行匹配时也不考虑查询字符串。所以针对关于页面的路由对于 /about、
+                            /About、/about/、/about?foo=bar、/about/?foo=bar 等路径都适用。</p>
+                        <p>路由匹配上之后就会调用你提供的函数，并把请求和响应对象作为参数传给这个函数，
+                            我们在第 6 章会详细介绍这两个对象。现在我们只是返回了状态码为 200 的普通文本
+                            （Express 默认的状态码是 200，不用显式指定）。</p>
+                        <p>我们这次使用的不是 Node 的 res.end ，而是换成了 Express 的扩展 res.send 。我们还用
+                            res.set 和 res.status 替换了 Node 的 res.writeHead 。Express 还提供了一个 res.type 方
+                            法，可以方便地设置响应头 Content-Type 。尽管仍然可以使用 res.writeHead 和 res.end ，
+                            但没有必要也不作推荐。</p>
+                        <p>注意，我们对定制的 404 和 500 页面的处理与对普通页面的处理应有所区别：用的不是
+                            app.get ，而是 app.use 。 app.use 是 Express 添加中间件的一种方法。我们会在第 10 章更
+                            深入地探讨中间件，现在你可以把它看作处理所有没有路由匹配路径的处理器。这里涉及
+                            一个非常重要的知识点：在 Express 中，路由和中间件的添加顺序至关重要。如果我们把
+                            404 处理器放在所有路由上面，那首页和关于页面就不能用了，访问这些 URL 得到的都
+                            是 404。现在我们的路由相当简单，但其实它们还能支持通配符，这会导致顺序上的问题。
+                            比如说，如果要给关于页面添加子页面，比如 /about/contact 和 /about/directions 会怎么样
+                            呢？下面这段代码是达不到预期效果的：</p>
+                        <pre class="code-para"><ol><li><span>app.get('/about*',function(req,res){</span></li><li><span>  // 发送内容……</span></li><li><span>})</span></li><li><span>app.get('/about/contact',function(req,res){</span></li><li><span>  // 发送内容……</span></li><li><span>})</span></li><li><span>app.get('/about/directions',function(req,res){</span></li><li><span>  // 发送内容……</span></li><li><span>})</span></li></ol></pre>
+                        <p>本例中的 /about/contact 和 /about/directions 处理器永远无法匹配到这些路径，因为第
+                            一个处理器的路径中用了通配符： /about* 。</p>
+                        <p>Express 能根据回调函数中参数的个数区分 404 和 500 处理器。第 10 章和 12 章会详细介
+                            绍错误路由。</p>
+                        <p>你可以再次启动服务器，现在首页和关于页面都可以运行了。</p>
+                        <p>截至目前我们所做的事情，即使不用 Express 也很容易完成，但 Express 所提供的一些功能
+                            并非那么显而易见。还记得上一章我们是如何规范化 req.url 来确定所请求的资源吗？我
+                            们必须手动剥离查询字符串和反斜杠，并转化为小写。而 Express 的路由器会自动帮我们
+                            处理好这些细节。尽管目前看起来这并非什么大不了的事情，但这只是 Express 路由器能
+                            力的冰山一角。</p>
+                        <div class="lesson-box" id="catalog3-3-1">
+                            <h5 class="lesson-top">3.3.1    视图和布局</h5>
+                            <p>如果你熟知“模型 - 视图 - 控制器”模式，那你对视图这个概念应该不会感到陌生。视图
+                                本质上是要发送给用户的东西。对网站而言，视图通常就是 HTML，尽管也会发送 PNG
+                                或 PDF，或者其他任何能被客户端渲染的东西。不过，本书中的视图是指 HTML。</p>
+                            <p>视图与静态资源（比如图片或 CSS 文件）的区别是它不一定是静态的：HTML 可以动态构
+                                建，为每个请求提供定制的页面。</p>
+                            <p>Express 支持多种不同的视图引擎，它们有不同层次的抽象。Express 比较偏好的视图引擎
+                                是 Jade（因为它也是 TJ Holowaychuk 开发的） 。Jade 所采用的方式非常精简：你写的根本
+                                不像是 HTML，因为没有尖括号和结束标签，这样可以少敲好多次键盘。然后，Jade 引擎
+                                会将其转换成 HTML。</p>
+                            <p>Jade 是非常吸引人的，但这种程度的抽象也是有代价的。如果你是一名前端开发人员，即
+                                便你实际上是用 Jade 编写视图，也必须理解 HTML，并且有足够深入的认识。我认识的
+                                大多数前端开发人员都不喜欢他们主要的标记语言被抽象化处理。因此我推荐使用另外
+                                一个抽象程度较低的模板框架 Handlebars。Handlebars（基于与语言无关的流行模板语言
+                                Mustache）不会试图对 HTML 进行抽象：你编写的是带特殊标签的 HTML，Handlebars 可
+                                以借此插入内容。</p>
+                            <p>为了支持 Handlebars，我们要用到 Eric Ferraiuolo 的 express3-handlebars 包（尽管名字中
+                                是 express3，但这个包在 Express 4.0 中也可以使用）。在你的项目目录下执行：</p>
+                            <pre class="code-para"><ol><li><span>npm install --save express3-handlebars</span></li></ol></pre>
+                            <p>然后在创建 app 之后，把下面的代码加到 meadowlark.js 中：</p>
+                            <pre class="code-para"><ol><li><span>var app = express();</span></li><br><li><span>// 设置 handlebars 视图引擎</span></li><li><span>var handlebars = require('express3-handlebars')</span></li><li><span>  .create({ defaultLayout:'main' });</span></li><li><span>app.engine('handlebars', handlebars.engine);</span></li><li><span>app.set('view engine', 'handlebars');</span></li></ol></pre>
+                            <p>这段代码创建了一个视图引擎，并对 Express 进行了配置，将其作为默认的视图引擎。接
+                                下来创建 views 目录，在其中创建一个子目录 layouts。如果你是一位经验丰富的 Web 开发
+                                人员，可能已经熟悉布局的概念了（有时也被称为“母版页”）。在开发网站时，每个页面
+                                上肯定有一定数量的 HTML 是相同的，或者非常相近。在每个页面上重复写这些代码不仅
+                                非常繁琐，还会导致潜在的维护困境：如果你想在每个页面上做一些修改，那就要修改所
+                                有文件。布局可以解决这个问题，它为网站上的所有页面提供了一个通用的框架。</p>
+                            <p>所以我们要给网站创建一个模板。接下来我们创建一个 views/layouts/main.handlebars 文件：</p>
+                            <pre class="code-para"><ol><li><span>&lt;!doctype html&gt;</span></li><li><span>&lt;html&gt;</span></li><li><span>&lt;head&gt;</span></li><li><span>    &lt;title&gt;Meadowlark Travel&lt;/title&gt;</span></li><li><span>&lt;/head&gt;</span></li><li><span>&lt;body&gt;</span></li><li><span>    \{{{body}}}</span></li><li><span>&lt;/body&gt;</span></li><li><span>&lt;/html&gt;</span></li></ol></pre>
+                            <p>以上内容你未曾见过的可能只有 {{{body}}} 。这个表达式会被每个视图自己的 HTML 取
+                                代。在创建 Handlebars 实例时，我们指明了默认布局（ defaultLayout:'main' ）。这就意味
+                                着除非你特别指明，否则所有视图用的都是这个布局。</p>
+                            <p>接下来我们给首页创建视图页面，views/home.handlebars：</p>
+                            <pre class="code-para"><ol><li><span>&lt;h1&gt;Welcome to Meadowlark Travel&lt;/h1&gt;</span></li></ol></pre>
+                            <p>关于页面，views/about.handlebars：</p>
+                            <pre class="code-para"><ol><li><span>&lt;h1&gt;About Meadowlark Travel&lt;/h1&gt;</span></li></ol></pre>
+                            <p>未找到页面，views/404.handlebars：</p>
+                            <pre class="code-para"><ol><li><span>&lt;h1&gt;404 - Not Found&lt;/h1&gt;</span></li></ol></pre>
+                            <p>最后是服务器错误页面，views/500.handlebars：</p>
+                            <pre class="code-para"><ol><li><span>&lt;h1&gt;500 - Server Error&lt;/h1&gt;</span></li></ol></pre>
+                            <p class="tip-para">你或许想在编辑器中把 .handlebars 和 .hbs （另外一种常见的 Handlebars 文件
+                                扩展名）跟 HTML 相关联，以便启用语法高亮和其他编辑器特性。如果是
+                                vim，你可以在 ~/.vimrc 文件中加上一行 au BufNewFile,BufRead *.handlebars
+                                set file type=html 。其他编辑器请参考相关文档。</p>
+                            <p>现在视图已经设置好了，接下来我们必须将使用这些视图的新路由替换旧路由：</p>
+                            <pre class="code-para"><ol><li><span>app.get('/', function(req, res) {</span></li><li><span>  res.render('home');</span></li><li><span>});</span></li><li><span>app.get('/about', function(req, res) {</span></li><li><span>  res.render('about');</span></li><li><span>});</span></li><br><li><span>// 404 catch-all 处理器（中间件）</span></li><li><span>app.use(function(req, res, next){</span></li><li><span>  res.status(404);</span></li><li><span>  res.render('404');</span></li><li><span>});</span></li><br><li><span>// 500 错误处理器（中间件）</span></li><li><span>app.use(function(err, req, res, next){</span></li><li><span>  console.error(err.stack);</span></li><li><span>  res.status(500);</span></li><li><span>  res.render('500');</span></li><li><span>});</span></li></ol></pre>
+                            <p>需要注意，我们已经不再指定内容类型和状态码了：视图引擎默认会返回 text/html 的内容类型和 200 的状态码。在 catch-all 处理器（提供定制的 404 页面）以及 500 处理器中，
+                                我们必须明确设定状态码。</p>
+                            <p>如果你再次启动服务器检查首页和关于页面，将会看到那些视图已呈现出来。如果你检查
+                                源码，将会看到 views/layouts/main.handlebars 中的套路化 HTML。</p>
+                        </div>
+                        <div class="lesson-box" id="catalog3-3-2">
+                            <h5 class="lesson-top">3.3.2    视图和静态文件</h5>
+                            <p>Express 靠中间件处理静态文件和视图。第 10 章会更详细地介绍中间件的概念。现在只需
+                                了解中间件是一种模块化手段，它使得请求的处理更加容易。</p>
+                            <p>static 中间件可以将一个或多个目录指派为包含静态资源的目录，其中的资源不经过任何
+                                特殊处理直接发送到客户端。你可以在其中放图片、CSS 文件、客户端 JavaScript 文件之
+                                类的资源。</p>
+                            <p>在项目目录下创建名为 public 的子目录 （因为这个目录中的所有文件都会直接对外开放，
+                                所以我们称这个目录为 public）。接下来，你应该把 static 中间件加在所有路由之前：</p>
+                            <pre class="code-para"><ol><li><span>app.use(express.static(__dirname + '/public'));</span></li></ol></pre>
+                            <p>static 中间件相当于给你想要发送的所有静态文件创建了一个路由，渲染文件并发送给客
+                                户端。接下来我们在 public 下面创建一个子目录 img，并把 logo.png 文件放在其中。</p>
+                            <p>现在我们可以直接指向 /img/logo.png （注意：路径中没有 public，这个目录对客户端来说是
+                                隐形的）， static 中间件会返回这个文件，并正确设定内容类型。接下来我们修改一下布
+                                局文件，以便让我们的 logo 出现在所有页面上：</p>
+                            <pre class="code-para"><ol><li><span>&lt;body&gt;</span></li><li><span>  &lt;header&gt;&lt;img src="/img/logo.png" alt="Meadowlark Travel Logo"&gt;&lt;/header&gt;</span></li><li><span>  \{{{body}}}</span></li><li><span>&lt;/body&gt;</span></li></ol></pre>
+                            <p class="tip-para">&lt;header&gt; 是 HTML5 中引入的元素，它出现在页面顶部，提供一些与内容有
+                                关的额外语义信息，比如 logo、标题文本或导航等。</p>
+                        </div>
+                        <div class="lesson-box" id="catalog3-3-3">
+                            <h5 class="lesson-top">3.3.3    视图中的动态内容</h5>
+                            <p>视图并不只是一种传递静态 HTML 的复杂方式（尽管它们当然能做到）。视图真正的强大
+                                之处在于它可以包含动态信息。</p>
+                            <p>比如在关于页面上发送“虚拟幸运饼干”。我们在 meadowlark.js 中定义一个幸运饼干数组：</p>
+                            <pre class="code-para"><ol><li><span>var fortunes = [</span></li><li><span>  "Conquer your fears or they will conquer you.",</span></li><li><span>  "Rivers need springs.",</span></li><li><span>  "Do not fear what you don't know.",</span></li><li><span>  "You will have a pleasant surprise.",</span></li><li><span>  "Whenever possible, keep it simple.",</span></li><li><span>];</span></li></ol></pre>
+                            <p>修改视图（/views/about.handlebars）以显示幸运饼干：</p>
+                            <pre class="code-para"><ol><li><span>&lt;h1&gt;About Meadowlark Travel&lt;/h1&gt;</span></li><li><span>&lt;p&gt;Your fortune for the day:&lt;/p&gt;</span></li><li><span>&lt;blockquote&gt;\{{fortune}}&lt;/blockquote&gt;</span></li></ol></pre>
+                            <p>接下来修改路由 /about，随机发送幸运饼干：</p>
+                            <pre class="code-para"><ol><li><span>app.get('/about', function(req, res){</span></li><li><span>  var randomFortune =</span></li><li><span>      fortunes[Math.floor(Math.random() * fortunes.length)];</span></li><li><span>  res.render('about', { fortune: randomFortune });</span></li><li><span>});</span></li></ol></pre>
+                            <p>重启服务器，加载 /about 页面，你会看到一个随机发放的幸运饼干。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog3-4">
+                    <h3 class="section-top">3.4　小结</h3>
+                    <div class="section-content">
+                        <p>我们刚用 Express 创建了一个非常基本的网站。尽管简单，但这个网站包含了功能完备
+                            的网站所需的一切。在下一章中，我们会事无巨细地介绍为增加更高级功能需做的准备
+                            工作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chapter-box" id="catalog4">
+            <div class="chapter-top">
+                <h2>第4章</h2>
+                <h1>工欲善其事，必先利其器</h1>
+            </div>
+            <div class="chapter-content">
+                <p>在前面两章中，我们只是试验了一下，可以说是小试牛刀。在实现更复杂的功能之前，我
+                    们先做一些准备工作，并培养一些好的工作习惯。</p>
+                <p>在本章中，我们将开始我们的草地鹨旅行社项目。然而在开始搭建网站之前，要先确保我
+                    们有制作高质量产品所需的工具。</p>
+                <p class="tip-para">你不一定非要按照本书中的例子来做。如果你迫切地想要搭建自己的网站，
+                    可以参照这个例子的框架，以此为基础进行相应的修改，这样等你读完本书
+                    时，就有一个已经完工的网站了！</p>
+                <div class="section-box" id="catalog4-1">
+                    <h3 class="section-top">4.1　最佳实践</h3>
+                    <div class="section-content">
+                        <p>最近你应该听了很多次“最佳实践”这个词，它的意思是你应该“正确地做事”，不要走
+                            捷径（我们马上就会讨论它的确切含义）。毫无疑问，你一定听过那句工程格言：面对
+                            “快速”“低廉”“优质”三个选项，你总是只能任选其中两个。这个模型总会困扰我，因
+                            为它没考虑正确做事的累计价值。你第一次正确做事所用的时间可能是你马马虎虎迅速做
+                            事所需时间的 5 倍。然而第二次将只需要 3 倍的时间。等你做过很多次后，正确做事的速
+                            度几乎能与马马虎虎迅速做事一样了。</p>
+                        <p>有一位击剑教练总是提醒我们，熟并不能生巧：熟练的能变成永久不变的。也就是说，如
+                            果你一次又一次地做同一件事，最终它将变成下意识的、机械式的。确实如此，但它没考
+                            虑你不断练习做某件事情时的品质。如果你按照坏习惯练习，坏习惯就变成机械式的了。</p>
+                        <p>所以你应该遵循完美的规则去练习，这样才能成就完美。因此我希望接下来你能遵循本书
+                            中的示例，就好像你在搭建一个真实的网站，就好像你的声誉和报酬都取决于这次产出的
+                            品质。你不仅要从本书中学习新技能，还要通过练习培养好习惯。</p>
+                        <p>我们练习的重点是版本控制和质量保证。本章会讨论版本控制，下一章将讨论质量保证。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog4-2">
+                    <h3 class="section-top">4.2　版本控制</h3>
+                    <div class="section-content">
+                        <p>我不必再跟你解释版本控制的价值了吧（它可能需要一整本书）！大体而言，版本控制有
+                            以下益处：</p>
+                        <li>文档</li>
+                        <div class="sketch-para">
+                            <p>能够回溯项目的历史，回顾所做的决策及组件的开发顺序，可形成宝贵的文档。记录项
+                                目的历史是十分有价值的。</p>
+                        </div>
+                        <li>归属</li>
+                        <div class="sketch-para">
+                            <p>如果你在一个团队中工作，归属极其重要。当你发现代码模糊不清或有问题时，知道是
+                                谁做的修改可以节省你很多时间。也许，与这个修改相关的评论就足以解决你的疑问
+                                了，但如果不能，你也知道应该和谁沟通。</p>
+                        </div>
+                        <li>试验</li>
+                        <div class="sketch-para">
+                            <p>一个好的版本控制系统能让你做试验。你可以引出一个分支，尝试做一些新的东西，不
+                                用担心会影响项目的稳定性。如果试验成功，你可以把它纳入到项目中；如果不成功，
+                                你可以放弃它。</p>
+                        </div>
+                        <p>几年前我开始用分布式版本控制系统（DVCS）。我把选择的范围缩小到只有 Git 和
+                            Mercurial，最终因为 Git 的普及程度和灵活性选定了 Git。这两个都是优秀的免费版本控制
+                            系统，我建议你选择其中的一个。本书用的是 Git，但你也可以用 Mercurial（或者其他版
+                            本控制系统）。</p>
+                        <p>如果你不了解 Git，建议你看一下 Jon Loeliger 的 Version Control with Git (O’Reilly，http://
+                            shop.oreilly.com/product/9780596520137.do）。另外，Code School 也有很好的 Git 入门课程
+                            （https://try.github.io/）。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog4-3">
+                    <h3 class="section-top">4.3　针对本书如何使用Git</h3>
+                    <div class="section-content">
+                        <p>首先确保你已经安装了 Git。输入 git --version ，如果没有输出版本号，那你还需要安装
+                            一下 Git。请参见 Git 文档（http://git-scm.com/）中的安装指南。</p>
+                        <p>参照本书中的例子有两种方式。一种是自己录入示例，并参照其中的 Git 命令。另一种是克隆我给所有示例用的 Git 存储库，并检出每个例子的相关标签。有些人自己录入示例可
+                            以学得更好，而有些人则偏好只是观察，然后做些修改，而不是全部录入。</p>
+                        <div class="lesson-box" id="catalog4-3-1">
+                            <h5 class="lesson-top">4.3.1    如果你要自己动手</h5>
+                            <p>我们的项目已经有了一个非常粗略的框架：一些视图，一个布局，一个 logo，一个主程
+                                序文件，一个 package.json 文件。接下来我们继续推进，创建一个 Git 存储库并加入所有
+                                文件。</p>
+                            <p>首先，我们进入项目目录并创建一个 Git 存储库：</p>
+                            <pre class="code-para"><ol><li><span>git init</span></li></ol></pre>
+                            <p>在添加这些文件之前，需要创建一个 .gitignore 文件，以防不慎把不想添加的东西加进去。
+                                在项目目录中创建一个文本文件 .gitignore，你可以把任何想让 Git 默认忽略的文件或目
+                                录写在该文件里（每个一行）。它还支持通配符。比如说，如果你的编辑器会创建带波形
+                                号的备份文件（比如 meadowlark.js~），你可以在 .gitignore 文件中放入 *~ 。如果你用的是
+                                Mac，应该还要在这个文件里加入 .DS_Store ，还有 node_modules （马上讲述原因）。所以
+                                这个文件看起来可能是这样的：</p>
+                            <pre class="code-para"><ol><li><span>node_modules</span></li><li><span>*~</span></li><li><span>.DS_Store</span></li></ol></pre>
+                            <p class="tip-para">.gitignore 文件中的条目也适用于子目录。所以如果你把 *~ 放在项目根目录
+                                下的 .gitignore 文件里，那么子目录里的所有这种备份文件都会被忽略。</p>
+                            <p>现在我们可以把所有已有的文件都加到 Git 里，这有很多种做法。我一般喜欢用 git add
+                                -A ，这是所有方法中最彻底的。如果你刚接触 Git，且只想提交一两个文件，我建议你逐
+                                一添加文件（比如 git add meadowlark.js ）；如果你想添加所有的修改（包括对文件的删
+                                除操作），则用 git add -A 。因为我们想添加做过的所有工作，所以使用：</p>
+                            <pre class="code-para"><ol><li><span>git add -A</span></li></ol></pre>
+                            <p class="tip-para">新手一般都会对 git add 命令感到困惑：它添加的是修改，而不是文件。所
+                                以，如果你修改过 meadowlark.js，然后输入 git add meadowlark.js ，你真正
+                                所做的是把刚刚做过的修改添加了进来。</p>
+                            <p>Git 有一个“暂存区”，当你执行 git add 时，这些修改就被存放在该区域中。所以
+                                我们刚才添加的修改实际上还没提交，但它们已经准备就绪了。要提交这些修改，用
+                                git commit ：</p>
+                            <pre class="code-para"><ol><li><span>git commit -m "Initial commit."</span></li></ol></pre>
+                            <p>-m "Initial commit." 是写一条与这次提交相关的消息。Git 甚至不允许没有消息的提交，
+                               这种要求是很有道理的。无论何时，一定要尽量提供有意义的提交消息，它们应该简明扼
+                               要地描述你所做的工作。</p>
+
+                        </div>
+                        <div class="lesson-box" id="catalog4-3-2">
+                            <h5 class="lesson-top">4.3.2    如果你要使用官方存储库</h5>
+                            <p>对于官方存储库，每次添加或修改已有源码我都会创建一个标签。要用它作为起点，只要
+                                克隆一下：</p>
+                            <pre class="code-para"><ol><li><span>git clone https://github.com/EthanRBrown/web-development-with-node-and-express</span></li></ol></pre>
+                            <p>为了方便，在每一章的开始部分我都添加了一个标签（一般指向前一章的最后一次提交）。
+                                所以现在你只要检出跟本章关联的标签就可以了：</p>
+                            <pre class="code-para"><ol><li><span>git checkout ch04</span></li></ol></pre>
+                            <p>注意，章节标签（比如 ch04）表示你即将进入那一章时项目的状态， 是在讨论任何内容之
+                                前，有时还可能伴随着前一章的最后一个标签。随着章节向前推进，在讨论完其中内容
+                                之后还会添加标签。比如，当你看到后面的“npm 包”这一节时，可以检出标签为 ch04-
+                                npm-packages 的源码，查看在这一节中讨论的变化。并不是每一节都有对应的标签，但
+                                我会尽量确保存储库易于理解。了解更多有关存储库如何组织的信息，请参见 README
+                                文件。</p>
+                            <p class="tip-para">如果你到某一点时想要做试验，记得你检出的标签要将你置于一种 Git 称为
+                                “分离的 HEAD”的状态中。尽管你可以随意编辑任何文件，但如果你不先
+                                创建一个分支，提交任何修改都是不安全的。所以如果你确实想要基于一个
+                                标签做一个试验性的分支，只需创建一个新分支后检出，只要一个命令就可
+                                以做到： git checkout -b experiment （experiment 是分支的名字，你可以用你
+                                喜欢的任何名字）。然后，你就可以安全地在这个分支上随意编辑和提交了。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog4-4">
+                    <h3 class="section-top">4.4　npm包</h3>
+                    <div class="section-content">
+                        <p>项目所依赖的 npm 包放在 node_modules 目录下 （很遗憾这个包的名字为 node_modules 而
+                            不是 npm_packages，因为 Node 模块是一个相关但不同的概念）。如果你想满足自己的好奇心，抑或是为了调试程序，可以随意浏览这个目录，但永远不要修改这个目录中的任何代
+                            码。这是因为那不仅是不良的行为，而且你所做的修改很可能轻易地就被 npm 消除了。如
+                            果你想对项目所依赖的包进行修改，正确的做法应该是创建那个项目的副本。如果你确实
+                            采取了这种策略，并且觉得自己的改进也能帮到其他人，恭喜你，你现在已经参与到一个
+                            开源项目中来了！你可以提交自己的修改，如果这些修改符合项目的标准，它们会被纳入
+                            到官方包中。改善已有包和创建定制包超出了本书的范围，但如果你想改善已有包，可以
+                            向活跃的开发者社区寻求帮助。</p>
+                        <p>package.json 文件有双重作用：描述项目和列出依赖项。现在去看看你的 package.json 文
+                            件，你应该能看到：</p>
+                        <pre class="code-para"><ol><li><span>{</span></li><li><span>  "dependencies": {</span></li><li><span>      "express": "^4.0.0",</span></li><li><span>      "express3-handlebars": "^0.5.0"</span></li><li><span>  }</span></li><li><span>}</span></li></ol></pre>
+                        <p>现在我们的 package.json 文件里只有与依赖项相关的信息。注意包版本号之前的插入符
+                            （^），这表明在下一个主要版本号之前，所有以指定版本号开始的版本都能用。比如说，
+                            这个 package.json 中的 Express，从 4.0.0 开始都能用，所以 4.0.1 和 4.9.9 都可以，但 3.4.7
+                            不行，5.0.0 也不行。这是使用 npm install --save 时默认指定的版本范围，并且通常也很
+                            安全。这种方式的结果是如果你想升级到新版本，就只能编辑这个文件来指定新版本。一
+                            般来说，这是好事，因为这样可以防止依赖项的变化在你不知情的情况下破坏项目。npm
+                            中的版本号是由组件 semver（表示“语义版本器”）解析的。如果你想了解 npm 中更多
+                            与版本有关的信息，可以翻阅一下 semver 的文档（https://www.npmjs.org/doc/misc/semver.
+                            html）。</p>
+                        <p>因为 package.json 文件中列出了所有的依赖项，所以说 node_modules 目录实际上是个衍
+                            生品。这就是说，如果你把它删了，要让项目重新恢复工作，只需运行 npm install ，它
+                            便会重建这个目录，并把所有必需的依赖项全放进去。因此我建议把 node_modules 放
+                            在 .gitignore 文件中，不要把它纳入到源码的版本控制中去。然而也有人觉得存储库中应该
+                            包含运行项目所必需的一切东西，他们更愿意把 node_modules 放在源码的版本控制中。我
+                            觉得这是存储库中的“噪音”，我更偏向于忽略它。</p>
+                        <p>不管什么时候在项目中使用了 Node 模块，你都要确保它作为依赖项出现在 package.json 文
+                            件中。如果你没能做到这一点，npm 将无法构建出恰当的依赖项，而当其他开发人员检出
+                            项目时（或者当你换了一台机器时），就无法安装正确的依赖项，包管理器的价值也不能
+                            得到有效发挥。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog4-5">
+                    <h3 class="section-top">4.5　项目元数据</h3>
+                    <div class="section-content">
+                        <p>package.json 文件的另一个作用便是存放项目的元数据，比如项目名称、作者、授权信息
+                            等。如果你用 npm init 来初始化创建 package.json 文件，它会为你生成必需的域，然后
+                            你可以随时修改它们。如果你想把项目放到 npm 或 Github 上，则对元数据的要求会比
+                            较严格。如果你想了解更多有关 package.json 中各个域的信息，请查阅 package.json 的文
+                            档（https://www.npmjs.org/doc/files/package.json.html）。另一个重要的元数据是 README.
+                            md 文件。这个文件很适合描述网站的整体架构，也适合于存放刚接触项目的人需要了
+                            解的重要信息。这个文件是用基于 Markdown 的文本维基格式写成的。更多信息请查阅
+                            Markdown 文档（http://daringfireball.net/projects/markdown/）。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog4-6">
+                    <h3 class="section-top">4.6　Node模块</h3>
+                    <div class="section-content">
+                        <p>前面提到过，Node 模块和 npm 包是两个相互关联但又彼此不同的概念。Node 模块，就像
+                            它的名字一样，提供了一个模块化和封装的机制。npm 包则提供了一种存储、版本化和引
+                            用项目（不限于模块）的标准范式。比如，我们在主程序文件中将 Express 作为一个模块
+                            引入：</p>
+                        <pre class="code-para"><ol><li><span>var express = require('express');</span></li></ol></pre>
+                        <p>require 是一个用来引入模块的 Node 函数。Node 默认会在目录 node_modules（这应该不
+                            足为奇，在 node_modules 目录下有个 express 目录）中寻找这些模块。然而 Node 还提供
+                            了创建自有模块的机制（你永远不要在 node_modules 中创建自己的模块）。接下来，我们
+                            看看如何将上一章实现的幸运饼干功能模块化。</p>
+                        <p>首先，我们创建一个用来保存模块的目录。名字随意，但一般都称为 lib（library 的缩写）。
+                            在这个目录下创建一个 fortune.js 文件：</p>
+                        <pre class="code-para"><ol><li><span>var fortuneCookies = [</span></li><li><span>  "Conquer your fears or they will conquer you.",</span></li><li><span>  "Rivers need springs.",</span></li><li><span>  "Do not fear what you don't know.",</span></li><li><span>  "You will have a pleasant surprise.",</span></li><li><span>  "Whenever possible, keep it simple.",</span></li><li><span>];</span></li><br><li><span>exports.getFortune = function() {</span></li><li><span>  var idx = Math.floor(Math.random() * fortuneCookies.length);</span></li><li><span>  return fortuneCookies[idx];</span></li><li><span>};</span></li></ol></pre>
+                        <p>这里要特别注意全局变量输出的用法。如果你想让一个东西在模块外可见，必须把它加到
+                            exports 上。在这个例子中，在模块外可以访问到函数 getFortune ，但数组 fortuneCookies
+                            是完全隐藏起来的。这是一件好事，因为封装可以减少容易出错和较脆弱的代码。</p>
+                        <p class="tip-para">有几种从模块中输出功能的方法。本书会讲到各种不同的方法，并在第 22
+                            章中进行汇总。</p>
+                        <p>我们现在可以从 meadowlark.js 中移除 fortuneCookies 数组（尽管留下它也没什么坏处，
+                            因为它绝不会跟 lib/fortune.js 中定义的同名数组产生冲突）。按惯例（但不是必须），在文
+                            件的顶部要指明引入什么，所以我们在 meadowlark.js 文件的顶部加上下面这行代码：</p>
+                        <pre class="code-para"><ol><li><span>var fortune = require('./lib/fortune.js');</span></li></ol></pre>
+                        <p>注意，我们在模块名称前加了前缀 ./ 。这是告诉 Node，它不应该到 node_modules 目录中
+                            查找这个模块，如果我们忽略了这个前缀就会导致失败。</p>
+                        <p>接下来在关于页面的路由中，我们可以利用以上模块里的 getFortune 方法：</p>
+                        <pre class="code-para"><ol><li><span>app.get('/about', function(req, res) {</span></li><li><span>  res.render('about', { fortune: fortune.getFortune() } );</span></li><li><span>});</span></li></ol></pre>
+                        <p>如果你一直在按照步骤操作，现在可以提交这些修改了：</p>
+                        <pre class="code-para"><ol><li><span>git add -A</span></li><li><span>git commit -m "Moved 'fortune cookie' functionality into module."</span></li></ol></pre>
+                        <p>或者如果你在用官方存储库，则可以看这个标签中的变化：</p>
+                        <pre class="code-para"><ol><li><span>git checkout ch04</span></li></ol></pre>
+                        <p>你将会发现用模块封装功能既强大又简便，它能改善项目的总体设计和可维护性，还能使
+                            测试变得更加容易。了解更多信息，请参考 Node 模块的官方文档（http://nodejs.org/api/
+                            modules.html）。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chapter-box" id="catalog5">
+            <div class="chapter-top">
+                <h2>第5章</h2>
+                <h1>质量保证</h1>
+            </div>
+            <div class="chapter-content">
+                <p>很不幸，质量保证是一个很容易让开发人员感到恐惧的词汇。毕竟，每个人都希望制作出
+                    高品质的软件。所以最终目标不是症结，政治问题才是。我发现 Web 开发中一般会出现两
+                    种情况：</p>
+                <li>大型或资金充裕的组织</li>
+                <div class="sketch-para"><p>这些组织通常会有 QA 部门，并且不幸的是，QA 部门和开发部门之间是一种敌对关
+                    系。这是最糟糕的事情。两个部门都在相同的团队中，目标一致，但 QA 成功的标准
+                    是找到更多 bug，而开发成功的标准一般是产生较少的 bug，因此形成了冲突和竞争的
+                    基础。</p></div>
+                <li>小型组织或预算有限的组织</li>
+                <div class="sketch-para"><p>这些组织通常没有 QA 部门，开发人员既要开发软件，又要承担 QA 工作。这不是荒谬
+                    的想象，或者利益冲突。然而 QA 跟开发大不相同，它需要不同的个性和才能。这并不
+                    是不可能的，确实有些开发人员有 QA 的思维模式，但当最终期限临近时，在 QA 上投
+                    入的力量往往无法保证，从而对项目造成损害。</p></div>
+                <p>大多数现实生活中的工作都需要多种技能，并且渐渐地，个人越来越难成为掌握所有这些
+                    技能的专家。然而，具备某些职责之外的技能可以提升你在团队中的地位，也可以使团队
+                    的工作更加高效。具备 QA 技能的开发人员就是如此：这两种工作连接得如此紧密，以至
+                    于跨学科的理解力变得极有价值。</p>
+                <p>业界还有一种将 QA 和开发岗位融合的趋势，让开发人员负责 QA。在这种范式下，由擅
+                    长 QA 的软件工程师担任开发人员的顾问，帮他们将 QA 植入到开发流程中。不管 QA
+                    岗位是分散的还是集中的，了解 QA 对开发人员都是有益的。</p>
+                <p>这本书不是面向 QA 专家的，而是面向开发人员的。所以我的目标不是把你变成 QA 专家，
+                    而是介绍一些这方面的经验。如果你所在的组织有专职 QA，与他们沟通和协作将会变得
+                    更容易。如果没有，它可以是一个起始点，让你为项目建立一个完备的 QA 方案。</p>
+                <div class="section-box" id="catalog5-1">
+                    <h3 class="section-top">5.1　QA：值得吗</h3>
+                    <div class="section-content">
+                        <p>QA 的成本很高，而且有时候非常高。那它到底值不值得呢？这个计算起来很复杂。大多
+                            数组织都会使用某种“投入产出”模型。如果你花了钱，那么肯定希望至少能收回成本
+                            （多了更好）。然而对于 QA 而言，投入和产出之间的关系很难厘清。比如说，一个完善并
+                            广受好评的产品与一个新的、不知名的项目相比，可能要花费更长的时间去处理质量问
+                            题。很显然，没有人想生产质量低下的产品，但技术上的压力很大。推向市场的时间也很
+                            重要，相比于两个月后推出完美的产品，有时尽快推出一个不尽完美的产品更好。</p>
+                        <p>在 Web 开发中，质量可以分解为四个维度：</p>
+                        <li>到达率</li>
+                        <div class="sketch-para"><p>到达率是指产品的市场普及程度，即查看网站或使用服务的人数。到达率和盈利能力是
+                            正相关关系：访问网站的人越多，购买产品或服务的人就越多。从开发的角度来看，搜
+                            索引擎优化（SEO）对到达率的影响最大，所以我们会在 QA 方案里包含 SEO。</p></div>
+                        <li>功能</li>
+                        <div class="sketch-para"><p>人们一旦访问了你的网站或使用了你的服务，能否把用户留下很大程度上取决于网站功
+                            能的质量：一个能像广告宣传那样工作的网站更有可能吸引回头客。与其他几个维度不
+                            同，功能测试一般都可以自动执行。</p></div>
+                        <li>可用性</li>
+                        <div class="sketch-para"><p>功能关心的是功能的正确性，而可用性评估的是人机交互（HCI）。根本问题是：“这个
+                            功能是以对目标受众有用的方式交付的吗？”这个问题经常被换成“它易用吗？”，尽
+                            管追求易用性经常跟灵活性或能力是相对的：程序员眼中的“容易”可能跟不懂技术的
+                            用户眼中的“容易”不一样。换句话说，评估可用性时你必须考虑目标受众。因为可用
+                            性评估的根本输入是用户，所以可用性评估一般无法自动完成。然而，你的 QA 方案中
+                            应该包含用户测试。</p></div>
+                        <li>审美</li>
+                        <div class="sketch-para"><p>审美是四个维度中最主观的，因此也是跟开发最不相关的一个维度。尽管跟网站审美相
+                            关的开发问题没有几个，但 QA 方案中还是应该包括网站审美的常规评审。把网站展示
+                            给有代表性的样本受众，看他们是否觉得已经过时，或者是不是没能激起你所期望的响应。记住，审美具有时间敏感性（审美标准会随着时间而发生变化），并且因人而异
+                            （受到某一受众喜爱的东西可能完全激不起其他受众的兴趣）。</p></div>
+                        <p>尽管这四个维度在 QA 方案中都要涉及，但因为功能测试和 SEO 可以在开发过程中自动完
+                            成，所以我们会将这两个维度作为本章的重点内容。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-2">
+                    <h3 class="section-top">5.2　逻辑与展示</h3>
+                    <div class="section-content">
+                        <p>从广义上来讲，网站上有两个“领域”：逻辑（经常被叫作“业务逻辑”，因为商业味儿比
+                            较浓，所以在这里没用这个词）和表示。你可以认为网站的逻辑存在于纯粹的认知领域。
+                            比如，在草地鹨旅行社这个案例中，可能会有个规则要求客户必须持有有效驾照才能租用
+                            代步车。这是一条基于数据的简单规则：对于每个代步车预定而言，用户需要有一个有效
+                            的驾照。这和表示是分开的。或许它只是最后形成的订单页面上的一个检查框，也有可能
+                            客户必须提供一个有效驾照编号，然后由草地鹨旅行社确认其是否有效。这个区分很重
+                            要，因为逻辑域中的事情应该尽可能简单清晰，而表示域复杂还是简单则视需要而定。表
+                            示域还是可用性和审美问题要关注的课题，而业务域则不是。</p>
+                        <p>你应该尽可能地在逻辑和表示之间划出清晰的界限。这有很多种方式，本书将把重点放
+                            在 JavaScript 模块对逻辑的封装上。另一方面，表示，将是对 HTML、CSS、多媒体、
+                            JavaScript 和 jQuery 之类的前端库的一种结合。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-3">
+                    <h3 class="section-top">5.3　测试的类型</h3>
+                    <div class="section-content">
+                        <p>本书要讨论的测试主要归为两大类：单元测试和集成测试（我认为“系统测试”属于集成
+                            测试）。单元测试的粒度非常细，是对单个组件进行测试以确保其功能正确，而集成测试
+                            是对多个组件甚至整个系统之间的交互进行测试。</p>
+                        <p>一般而言，单元测试在测试逻辑时更实用，也更恰当（尽管我们在表示域的代码中也会看
+                            到很多使用单元测试的实例）。集成测试则在两个领域中都有用。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-4">
+                    <h3 class="section-top">5.4　QA技术概览</h3>
+                    <div class="section-content">
+                        <p>本书会用以下这些技术和软件进行全面的测试：</p>
+                        <li>页面测试</li>
+                        <div class="sketch-para"><p>页面测试，顾名思义，用来测试页面的表示和前端功能。这同时涉及单元测试和集成测
+                            试。我们会用 Mocha 进行页面测试。</p></div>
+                        <li>跨页测试</li>
+                        <div class="sketch-para"><p>跨页测试是对从一个页面转到另一个页面的功能的测试。比如电子商务网站上的结账功
+                            能，通常要跨越多个页面。因为这种测试会涉及多个组件，所以一般被当作集成测试。
+                            这个测试用的是 Zombie.js。</p></div>
+                        <li>逻辑测试</li>
+                        <div class="sketch-para"><p>逻辑测试会对逻辑域进行单元和集成测试。它只会测试 JavaScript，跟所有表示功能
+                            分开。</p></div>
+                        <li>去毛</li>
+                        <div class="sketch-para"><p>去毛不是要找错误，而是要找潜在的错误。去毛的一般概念是找出可能有错误的区域，
+                            或者可能在将来导致错误发生的问题代码。我们会用 JSHint 做去毛。</p></div>
+                        <li>链接检查</li>
+                        <div class="sketch-para"><p>链接检查（确保你的网站上没有破损的链接）属于“唾手可得”的那一类测试。对简单
+                            的项目做链接检查看起来可能没有必要，但简单项目也会发展成复杂项目，破损的链接
+                            也将会出现。越早把链接检查放到 QA 过程里越好。链接检查属于单元测试（链接有效
+                            或者无效）。我们会用 LinkChecker 做链接检查。</p></div>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-5">
+                    <h3 class="section-top">5.5　运行你的服务器</h3>
+                    <div class="section-content">
+                        <p>本章中的所有技术都假定你的网站是处在运行中的。直到目前为止，我们都是用命令 node
+                            meadowlark.js 手工运行网站。这项技术很简单，我一般会在桌面上专门开一个窗口来做
+                            这个工作。然而这并不是唯一的选择。如果你发现自己在修改 JavaScript 时会忘记重启
+                            服务器，或许你希望找一个监控工具，在它发现 JavaScript 被修改后会自动重启服务器。
+                            nodemon（https://npmjs.org/package/nodemon）非常受欢迎，并且它还有一个 Grunt 插件
+                            （https://www.npmjs.org/package/grunt-nodemon）。本章最后还会介绍更多有关 Grunt 的知
+                            识。现在，我只是建议你在一个不同的窗口中一直运行你的应用程序。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-6">
+                    <h3 class="section-top">5.6　页面测试</h3>
+                    <div class="section-content">
+                        <p>对于页面测试，我建议把测试真正嵌入到页面中。这样做的优点是在做一个页面时，在浏
+                            览器中一加载页面就可以马上发现所有错误。这需要做些设置，我们开始吧。</p>
+                        <p>首先我们需要一个测试框架，这里用的是 Mocha。我们先把这个包添加到项目中：</p>
+                        <pre class="code-para"><ol><li><span>npm install --save-dev mocha</span></li></ol></pre>
+                        <p>注意，我们用的是 --save-dev 而不是 --save ，这是告诉 npm 要把这个包放在开发依赖项中，
+                            不要放在运行时依赖项里。这样当我们部署网站的现场实例时，可以减少项目的依赖项。</p>
+                        <p>因为 Mocha 要在浏览器中运行，所以我们要把 Mocha 资源放在 public 目录下，以便让客
+                            户端访问到。我们会把这些资源放在子目录 public/vendor 中：</p>
+                        <pre class="code-para"><ol><li><span>mkdir public/vendor</span></li><li><span>cp node_modules/mocha/mocha.js public/vendor</span></li><li><span>cp node_modules/mocha/mocha.css public/vendor</span></li></ol></pre>
+                        <p class="tip-para">把你用到的第三方库放在一个特殊的目录中是个好主意，比如 vendor。这
+                            样比较容易分清哪些代码是需要你负责测试和修改的，哪些代码你不应该
+                            触碰。</p>
+                        <p>测试通常需要一个 assert （或 expect ）函数。Node 框架中有这个函数，但浏览器中没有，
+                            所以我们要用 Chai 断言库：</p>
+                        <pre class="code-para"><ol><li><span>npm install --save-dev chai</span></li><li><span>cp node_modules/chai/chai.js public/vendor</span></li></ol></pre>
+                        <p>现在有了必需的文件，我们可以修改草地鹨旅行社网站来运行测试了。问题是我们不希
+                            望测试一直运行：它不仅会拖慢网站的速度，而且用户也不想看到测试结果。默认情况
+                            下测试应该是禁用的，但应该非常容易启用。为了满足这两个目标，我们准备用一个
+                            URL 参数来打开测试。等我们做好之后，访问 http://localhost:3000 会加载首页，而 http://
+                            localhost:3000?test=1 将会加载包含测试的首页。</p>
+                        <p>我们准备用一些中间件来检测查询字符串中的 test=1 。它必须出现在我们定义的所有路由
+                            之前：</p>
+                        <pre class="code-para"><ol><li><span>app.use(function(req, res, next){</span></li><li><span>  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';</span></li><li><span>  next();</span></li><li><span>});</span></li><br><li><span>// 路由放在这里</span></li></ol></pre>
+                        <p>现在我们可以修改 views/layouts/main.handlebars，有条件地引入测试框架。修改 <head>
+                            部分</p>
+                        <pre class="code-para"><ol><li><span>&lt;head&gt;</span></li><li><span>  &lt;title&gt;Meadowlark Travel&lt;/title&gt;</span></li><li><span>  \{{#if showTests}}</span></li><li><span>      &lt;link rel="stylesheet" href="/vendor/mocha.css"&gt;</span></li><li><span>  \{{/if}}</span></li><li><span>&lt;script src="//code.jquery.com/jquery-2.0.2.min.js"&gt;&lt;/script&gt;</span></li><li><span>&lt;/head&gt;</span></li></ol></pre>
+                        <p>这里还用到了 jQuery，因为我们不仅可以用它做网站的主 DOM 处理库，还可以做测试断
+                            言。你可以用自己喜欢的任何库（或者根本不用），但我建议你用 jQuery。你应该经常听
+                            说 JavaScript 库应该最后加载，放在结束标签 </body> 之前。这种说法是有道理的，我们
+                            也会学一些技术使之成为可能，但现在我们要早点儿引入 jQuery 1 。</p>
+                        <p>然后在紧挨着结束标签 &lt;/body&gt; 之前：</p>
+                        <pre class="code-para"><ol><li><span>  \{{#if showTests}}</span></li><li><span>      &lt;div id="mocha"&gt;&lt;/div&gt;</span></li><li><span>      &lt;script src="/vendor/mocha.js"&gt;&lt;/script&gt;</span></li><li><span>      &lt;script src="/vendor/chai.js"&gt;&lt;/script&gt;</span></li><li><span>      &lt;script&gt;</span></li><li><span>          mocha.ui('tdd');</span></li><li><span>          var assert = chai.assert;</span></li><li><span>      &lt;/script&gt;</span></li><li><span>      &lt;script src="/qa/tests-global.js"&gt;&lt;/script&gt;</span></li><li><span>      \{{#if pageTestScript}}</span></li><li><span>      &lt;script src="\{{pageTestScript}}"&gt;&lt;/script&gt;</span></li><li><span>      \{{/if}}</span></li><li><span>      &lt;script&gt;mocha.run();&lt;/script&gt;</span></li><li><span>  \{{/if}}</span></li><li><span>&lt;/body&gt;</span></li></ol></pre>
+                        <p>注意，我们引入了 Mocha 和 Chai，还有一个 /qa/global-tests.js 脚本。就如它的名字里暗示
+                            的那样，这是每个页面上都要运行的测试。在后续继续深入时，我们会有选择地链接每个
+                            页面特有的测试，这样你就可以针对不同的页面做不同的测试。我们先从全局测试开始，
+                            然后再增加针对各个页面的测试。我们先从单一的、简单的测试开始，确保页面具有有效
+                            的标题。创建目录 public/qa，然后在其中创建文件 tests-global.js：</p>
+                        <pre class="code-para"><ol><li><span>suite('Global Tests', function(){</span></li><li><span>  test('page has a valid title', function(){</span></li><li><span>      assert(document.title && document.title.match(/\S/) && document.title.toUpperCase() !== 'TODO');</span></li><li><span>  });</span></li><li><span>});</span></li></ol></pre>
+                        <p class="tip-para">Mocha 支持多种“界面”来控制测试的风格。默认界面是行为驱动开发
+                            （BDD），它让你以行为的方式思考。在 BDD 中，你描述组件和它们的行为，
+                            然后用测试去验证这些行为。然而，我发现这些测试经常不适合这一模型，
+                            然后 BDD 语言看起来就显得很奇怪。测试驱动开发（TDD）更具可行性，
+                            你描述的是测试集和其中的测试。你可以使用两种界面进行自己的测试，但
+                            会造成配置上的困难。因此我在本书中坚持使用 TDD。如果你喜欢 BDD，
+                            或者 BDD 和 TDD 混合的风格，当然也可以。</p>
+                        <p>接下来运行网站。访问首页并检查下源码，你看不到任何测试相关的代码。把 test=1 添加
+                            到查询字符串后面（http://localhost:3000/?test=1），你将看到在页面上运行的测试。无论什
+                            么时候，当你想测试网站时，只要在查询字符串上加上 test=1 就行了。</p>
+                        <p>接下来我们添加针对页面的测试。比如我们想确保关于页面上总是有一个指向联系我们页
+                            面的链接。创建一个 public/qa/tests-about.js 文件：</p>
+                        <pre class="code-para"><ol><li><span>suite('"About" Page Tests', function(){</span></li><li><span>  test('page should contain link to contact page', function(){</span></li><li><span>      assert($('a[href="/contact"]').length);</span></li><li><span>  });</span></li><li><span>});</span></li></ol></pre>
+                        <p>我们还要做最后一件事：在路由中指明视图应该使用哪个页面测试文件。在 meadowlark.js
+                            中修改关于页面的路由：</p>
+                        <pre class="code-para"><ol><li><span>app.get('/about', function(req, res) {</span></li><li><span>  res.render('about', {</span></li><li><span>      fortune: fortune.getFortune(),</span></li><li><span>      pageTestScript: '/qa/tests-about.js'</span></li><li><span>  });</span></li><li><span>});</span></li></ol></pre>
+                        <p>加载带查询字符串 test=1 的关于页面，你将会看到两个测试集并伴随着一次失败。现在添
+                            加一个指向尚不存在的联系我们页面的链接，你刷新页面后就能看到测试成功了。</p>
+                        <p>根据网站的属性，你或许想让这个测试更加自动化。比如说，如果你的路由是 /foo，可
+                            以自动将针对页面的测试设为 /foo/tests-foo.js。这种方式的不足是不够灵活。比如说，如
+                            果你有多个路由指向相同的视图，甚至是非常相似的内容，你可能想要使用同一个测试
+                            文件。</p>
+                        <p>现在先克制一下自己想要添加更多测试的欲望，伴随着本书的进程它会不断被添加。现在
+                            我们已经有了添加全局和针对页面的测试所必需的框架。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-7">
+                    <h3 class="section-top">5.7　跨页测试</h3>
+                    <div class="section-content">
+                        <p>跨页测试更有挑战性，因为需要你控制和观测浏览器。我们来看一个跨页测试情境的例
+                            子。比如，你的网站上有一个包含联系表单的 Request Group Rate 页面。营销部门想知道
+                            客户是从哪个页面点击链接进入 Request Group Rate 页面的，他们想知道客户是否在查看
+                            胡德河之旅或者俄勒冈海岸退潮。关联上它需要有一些隐藏的表单域和 JavaScript，并且
+                            测试将会涉及进入一个页面，然后点击 Request Group Rate 并验证隐藏域是否正确填充了。</p>
+                        <p>我们把这个情境设置好，然后看看如何进行测试。首先我们要创建一个旅游线路的页面，
+                            views/tours/hood-river.handlebars：</p>
+                        <pre class="code-para"><ol><li><span>&lt;h1&gt;Hood River Tour&lt;/h1&gt;</span></li><li><span>&lt;a class="requestGroupRate" href="/tours/request-group-rate"&gt;Request Group Rate.&lt;a&gt;</span></li></ol></pre>
+                        <p>以及一个引用页面，views/tours/request-group-rate.handlebars：</p>
+                        <pre class="code-para"><ol><li><span>&lt;h1&gt;Request Group Rate&lt;/h1&gt;</span></li><li><span>&lt;form&gt;</span></li><li><span>  &lt;input type="hidden" name="referrer"&gt;</span></li><li><span>  Name: &lt;input type="text" id="fieldName" name="name"&gt;&lt;br&gt;</span></li><li><span>  Group size: &lt;input type="text" name="groupSize"&gt;&lt;br&gt;</span></li><li><span>  Email: &lt;input type="email" name="email"&gt;&lt;br&gt;</span></li><li><span>  &lt;input type="submit" value="Submit"&gt;</span></li><li><span>&lt;/form&gt;</span></li><li><span>&lt;script&gt;</span></li><li><span>  $(document).ready(function(){</span></li><li><span>      $('input[name="referrer"]').val(document.referrer);</span></li><li><span>  });</span></li><li><span>&lt;/script&gt;</span></li></ol></pre>
+                        <p>然后在 meadowlark.js 中为这些页面创建路由</p>
+                        <pre class="code-para"><ol><li><span>app.get('/tours/hood-river', function(req, res){</span></li><li><span>  res.render('tours/hood-river');</span></li><li><span>});</span></li><li><span>app.get('/tours/request-group-rate', function(req, res){</span></li><li><span>  res.render('tours/request-group-rate');</span></li><li><span>});</span></li></ol></pre>
+                        <p>现在我们有了可以测试的对象，还需要测试它的方法，事情从这里开始变得复杂了。要测
+                            试这个功能，我们真的需要一个浏览器，或者非常类似浏览器的东西。很显然，我们可以
+                            手动在浏览器中访问 /tours/hood-river 页面，然后点击 Request Group Rate 链接，再探查隐
+                            藏的表单元素，看看它是否正确填上了引用页，但这么做太麻烦了，我们希望它可以自动
+                            完成。</p>
+                        <p>我们要找的是一个被称为无头浏览器的东西。无头浏览器意味着这个浏览器不需要真的在屏幕上显示什么，但它必须表现得像个浏览器。目前有三种流行的解决方案：Selenium、
+                            PhantomJS 和 Zombie。Selenium 超级健壮，有丰富的测试支持，但配置它超出了本书的
+                            范围。PhantomJS 是一个伟大的项目，并且它确实提供了一个无头 Webkit 浏览器（跟
+                            Chrome 和 Safari 用的是相同的引擎），所以跟 Selenium 一样，它也呈现出了非常高水平的
+                            现实性。然而它还没提供我们所需的简单的测试断言，这样我们就只剩下 Zombie 了。</p>
+                        <p>Zombie 没有使用已有的浏览器引擎，所以它不适合用来测试浏览器的功能特性，但用它
+                            来测试基本功能是非常好的，这正是我们所需要的。可惜 Zombie 现在不支持 Windows
+                            （可以装在 Cygwin 环境下）。然而人们已经在使用它了，在 Zombie 首页（http://zombie.
+                            labnotes.org/）上有相关信息。我努力想让本书中的内容与平台无关，但目前还没有
+                            Windows 下的无头浏览器测试方案。如果你是在 Windows 下开发，我建议你看看 Selenium
+                            或 PhantomJS，尽管学起来有一定的难度，但这些项目提供了很多东西。</p>
+                        <p>首先，我们安装 Zombie：</p>
+                        <pre class="code-para"><ol><li><span>npm install --save-dev zombie</span></li></ol></pre>
+                        <p>接下来创建一个新目录，简单地称其为 qa（跟 public/qa 区分开）。在这个目录下创建 qa/
+                            tests-crosspage.js 文件：</p>
+                        <pre class="code-para"><ol><li><span>var Browser = require('zombie'),</span></li><li><span>    assert = require('chai').assert;</span></li><br><li><span>var browser;</span></li><br><li><span>suite('Cross-Page Tests', function(){</span></li><li><span>  setup(function(){</span></li><li><span>      browser = new Browser();</span></li><li><span>  });</span></li><br><li><span>  test('requesting a group rate quote from the hood river tour page' + 'should populate the referrer field', function(done){</span></li><li><span>      var referrer = 'http://localhost:3000/tours/hood-river';</span></li><li><span>      browser.visit(referrer, function(){</span></li><li><span>          browser.clickLink('.requestGroupRate', function(){</span></li><li><span>              assert(browser.field('referrer').value=== referrer);</span></li><li><span>              done();</span></li><li><span>          });</span></li><li><span>      });</span></li><li><span>  });</span></li><br><li><span>  test('requesting a group rate from the oregon coast tour page should ' + 'populate the referrer field', function(done){</span></li><li><span>      var referrer = 'http://localhost:3000/tours/oregon-coast';</span></li><li><span>      browser.visit(referrer, function(){</span></li><li><span>          browser.clickLink('.requestGroupRate', function(){</span></li><li><span>              assert(browser.field('referrer').value=== referrer);</span></li><li><span>              done();</span></li><li><span>          });</span></li><li><span>      });</span></li><li><span>  });</span></li><br><li><span>  test('visiting the "request group rate" page dirctly should result ' + 'in an empty referrer field', function(done){</span></li><li><span>      browser.visit('http://localhost:3000/tours/request-group-rate',</span></li><li><span>          function(){</span></li><li><span>              assert(browser.field('referrer').value === '');</span></li><li><span>              done();</span></li><li><span>      });</span></li><li><span>  });</span></li><li><span> });</span></li></ol></pre>
+                        <p>setup 的参数是一个函数，测试框架运行每个测试之前都会执行它，我们在这里为每个测
+                            试创建一个新的浏览器实例。我们有三个测试。前两个检查如果你来自产品页面，引用页
+                            是否正确。方法 browser.visit 会真正加载页面，页面加载完成后，就会调用回调函数。
+                            然后用方法 browser.clickLink 找到 class 为 requestGroupRate 的链接，并访问它。链接
+                            目标页面加载完后调用回调函数，我们就到了 Request Group Rate 页面上。剩下唯一要做
+                            的就是断言隐藏域 referrer 跟我们原来访问的页面是匹配的。 browser.field 方法会返回
+                            一个 DOM 元素对象，具有 value 属性。最后一个测试只是确保直接访问 Request Group
+                            Rate 页面时 referrer 为空。</p>
+                        <p>在进行测试之前，必须先启动服务器（ node meadowlark.js ）。你应该在另一个窗口中启
+                            动它，以便看到控制台错误。然后，运行测试看看我们做得怎么样（确保你有全局安装的
+                            Mocha： npm install -g mocha ）：</p>
+                        <pre class="code-para"><ol><li><span>mocha -u tdd -R spec qa/tests-crosspage.js 2>/dev/null</span></li></ol></pre>
+                        <p>我们将看到有一个测试失败了。失败的是俄亥俄海滩之旅的页面，这一点也不意外，因为
+                            我们还没有做那个页面。但另外两个测试通过了，所以我们的测试是可以用的。继续添加
+                            俄亥俄海滩之旅的页面，所有测试就都能通过了。注意前面那个命令，我们用的是 TDD
+                            界面（默认是 BDD），还用了一个叫 spec 的报告。spec 报告比默认报告提供的信息要多一
+                            些。（等你有上百个测试的时候，你可能还是想用默认报告。）最后，你可能会注意到我们
+                            扔掉了错误输出（ 2>/dev/null ）。Mocha 会报告失败测试的全部堆栈跟踪。这些信息可能
+                            有用，但一般你只想看到哪些测试通过了，哪些失败了。如果你需要更多信息，去掉 2>/
+                            dev/null 就能看到错误的细节了。</p>
+                        <p class="tip-para">在实现功能特性之前写测试有一个优点（如果测试正确的话），即它们一开
+                            始都会失败。当你看着自己的测试开始通过时，不仅能得到满足感，还能确
+                            保测试是正确的。如果在你还没实现任何功能特性时测试就能通过，那这个
+                            测试很可能是有问题的。有时这被称为“红灯，绿灯”测试。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-8">
+                    <h3 class="section-top">5.8　逻辑测试</h3>
+                    <div class="section-content">
+                        <p>我们还要用 Mocha 做逻辑测试。现在我们只有一个小小的功能（幸运饼干生成器），所以
+                            设置它相当容易。另外，因为我们只有一个组件，也不能做集成测试，所以我们只添加单
+                            元测试。创建文件 qa/tests-unit.js：</p>
+                        <pre class="code-para"><ol><li><span>var fortune = require('../lib/fortune.js');</span></li><li><span>var expect = require('chai').expect;</span></li><br><li><span>suite('Fortune cookie tests', function(){</span></li><li><span>  test('getFortune() should return a fortune', function(){</span></li><li><span>      expect(typeof fortune.getFortune() === 'string');</span></li><li><span>  });</span></li><li><span>});</span></li></ol></pre>
+                        <p>现在我们可以运行 Mocha 来进行这个新的测试集：</p>
+                        <pre class="code-para"><ol><li><span>mocha -u tdd -R spec qa/tests-unit.js</span></li></ol></pre>
+                        <p>虽不是特别激动人心，但它为我们提供了一个模板，本书后续测试都可以照此实现。</p>
+                        <p class="tip-para">测试 熵功能 （随机的功能）很有挑战性。我们能对幸运饼干生成器做的另一
+                            个测试是确保它返回了一个随机的幸运饼干。但你怎么知道某个东西是否是
+                            随机的呢？一种方式是获取数量庞大的幸运饼干，比如 1000 个，然后测量
+                            响应的分布情况。如果函数确实是随机的，那就不会有突出的响应。这种方
+                            式的缺点是它的不确定性：某个幸运饼干出现的频率有可能（但不太可能）
+                            比其他的幸运饼干多 10 倍。如果这种情况出现了，测试可能失败（这要取
+                            决于你给随机设定的阈值有多激进），但实际上那或许并不能表明所测试的
+                            系统是失败的，它只是测试熵系统的一种结果。具体到我们的幸运饼干生成
+                            器，可能生成 50 个饼干，至少有三种不同的就是合理的。另一方面，如果
+                            我们是为科学模拟或安全组件开发随机源，可能要做更详细的测试。我们要
+                            说的重点是测试熵功能很困难，需要多思考。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-9">
+                    <h3 class="section-top">5.9　去毛</h3>
+                    <div class="section-content">
+                        <p>好的去毛机就像第二双眼睛，它能发现被我们人类大脑忽略的东西。最早的 JavaScript 去
+                            毛机是 Douglas Crockford 的 JSLint。Anton Kovalyov 在 2011 年创建了 JSLint 的分支，于
+                            是 JSHint 诞生了。Kovalyov 认为 JSLint 过于坚持己见了，所以他想创建一个定制性更强
+                            的、由社区制定的 JavaScript 去毛机。尽管我同意 Crockford 的几乎全部去毛建议，但我更
+                            喜欢能定制的去毛机，因此我推荐使用 JSHint 1 。</p>
+                        <p>通过 npm 获取 JSHint 非常容易：</p>
+                         <pre class="code-para"><ol><li><span>npm install -g jshint</span></li></ol></pre>
+                        <p>运行它也非常简单，只要指定源文件名调用它就可以了：</p>
+                        <pre class="code-para"><ol><li><span>jshint meadowlark.js</span></li></ol></pre>
+                        <p>如果你是一直跟着我们做的，JSHint 应该不会对 meadowlark.js 有任何抱怨。要看 JSHint
+                            能帮你做什么，请把下面这行代码放到 meadowlark.js 中，然后再像前面那样运行 JSHint：</p>
+                        <pre class="code-para"><ol><li><span>if( app.thing == null ) console.log( 'bleat!' );</span></li></ol></pre>
+                        <p>（JSHint 会抱怨你用了 == 而不是 === ，而 JSLint 还会抱怨缺少大括号。)</p>
+                        <p>我向你保证，坚持用去毛机能让你变成更优秀的程序员。既然如此，如果能把去毛机集
+                            成到编辑器中，以便在你刚犯下错误时就能提醒你，这样岂不更好？你是幸运的，因为
+                            JSHint（http://www.jshint.com/install/）能够集成到很多流行的编辑器中。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-10">
+                    <h3 class="section-top">5.10　链接检查</h3>
+                    <div class="section-content">
+                        <p>检查死链接看起来没什么吸引力，但它对搜索引擎如何给你的网站评级却有巨大的影响。
+                            它很容易集成到你的工作流中，所以不这样做就太不明智了。</p>
+                        <p>我推荐用 LinkChecker（http://wummel.github.io/linkchecker/）。它是跨平台的，既有命令行
+                            界面，也有图形界面。只要装上它并指向你的首页就可以了：</p>
+                        <pre class="code-para"><ol><li><span>linkchecker http://localhost:3000</span></li></ol></pre>
+                        <p>我们的网站还没有太多页面，所以 LinkChecker 应该很快就能检查完。</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-11">
+                    <h3 class="section-top">5.11　用Grunt实现自动化</h3>
+                    <div class="section-content">
+                        <p>我们在用的 QA 工具，如测试套件、去毛和链接检查器，只有在真正使用时才有价值。很
+                            多 QA 方案就是因为未使用而枯萎直至死去。如果你必须记住 QA 工具链中的所有组件和
+                            所有运行它们的命令，你（或你共事的其他开发人员）很有可能渐渐不再使用它们了。如
+                            果你准备花时间去掌握一个完备的 QA 工具链，那是不是也值得花点儿时间把这个过程自
+                            动化，把这个工具链真正用起来呢？</p>
+                        <p>我们很幸运，一个叫 Grunt 的工具可以很容易地实现这些任务的自动化。我们将把逻辑测
+                            试、跨页测试、去毛和链接检查放到一个 Grunt 命令中。为什么没有页面测试呢？尽管用
+                            PhantomJS 或 Zombie 之类的无头浏览器也有可能做到，但配置复杂，并且也超出了本书的范围。更进一步说，浏览器测试通常被设计成好像你运行在单个页面上，所以把它们合到
+                            其他测试中也没太大价值。</p>
+                        <p>首先要装上 Grunt 命令行以及 Grunt 本身：</p>
+                        <pre class="code-para"><ol><li><span>sudo npm install -g grunt-cli</span></li><li><span>npm install --save-dev grunt</span></li></ol></pre>
+                        <p>Grunt 要靠插件完成任务，Grunt 插件列表（http://gruntjs.com/plugins）中列出了所有可用
+                            插件。我们需要 Mocha、JSHint 和 LinkChecker 的插件。在写本书时，还没有 LinkChecker
+                            的插件，所以我们只能用执行 shell 命令的通用插件。接下来我们先把必需的插件装上：</p>
+                        <pre class="code-para"><ol><li><span>npm install --save-dev grunt-cafe-mocha</span></li><li><span>npm install --save-dev grunt-contrib-jshint</span></li><li><span>npm install --save-dev grunt-exec</span></li></ol></pre>
+                        <p>现在所有插件都装好了，在项目目录下创建一个 Gruntfile.js 文件：</p>
+                        <pre class="code-para"><ol><li><span>module.exports = function(grunt) {</span></li><li><span>  // 加载插件</span></li><li><span>  [</span></li><li><span>      'grunt-cafe-mocha',</span></li><li><span>      'grunt-contrib-jshint',</span></li><li><span>      'grunt-exec',</span></li><li><span>  ].forEach(function(task){</span></li><li><span>      grunt.loadNpmTasks(task);</span></li><li><span>  });</span></li><br><li><span>  // 配置插件</span></li><li><span>  grunt.initConfig({</span></li><li><span>      cafemocha: {</span></li><li><span>          all: { src: 'qa/tests-*.js', options: { ui: 'tdd' }, }</span></li><li><span>      },</span></li><li><span>      jshint: {</span></li><li><span>          app: ['meadowlark.js', 'public/js/**/*.js','lib/**/*.js'],</span></li><li><span>          qa: ['Gruntfile.js', 'public/qa/**/*.js', 'qa/**/*.js'],</span></li><li><span>      },</span></li><li><span>      exec: {</span></li><li><span>          linkchecker:{ cmd: 'linkchecker http://localhost:3000' }</span></li><li><span>      },</span></li><li><span>  });</span></li><br><li><span>  // 注册任务</span></li><li><span>  grunt.registerTask('default', ['cafemocha','jshint','exec']);</span></li><li><span>};</span></li></ol></pre>
+                        <p>在“加载插件”部分，我们指定了要用哪些插件，跟我们通过 npm 安装的插件一样。因为
+                            我不喜欢一次次地重复输入 loadNpmTasks （一旦你开始依赖 Grunt，相信我，你会添加更
+                            多插件的），所以我选择把它们全部放到数组中，并用 forEach 循环遍历。</p>
+                        <p>在“配置插件”部分，我们必须做些工作让每个插件都能正常工作。对于 cafemocha 插件
+                            （由它运行逻辑和跨页测试），我们必须告诉它测试在哪里。我们把所有测试都放在子目录
+                            qa 下面，并在文件名中加上前缀 tests-。注意，我们必须指定 TDD 界面。如果是 TDD 和
+                            BDD 混合的界面，则必须想办法把它们分开。比如，你可以用两个前缀 tests-tdd- 和 tests-
+                            bdd-。</p>
+                        <p>对于 JSHint，我们必须指定要对哪些 JavaScript 文件去毛。这里一定要当心！依赖项经
+                            常不一定能通过 JSHint，或者它们用的是不同的 JSHint 设置，并且你会被 JSHint 错误淹
+                            没，而其中很多代码都不是你写的。具体来说，你要确保别把 node_modules 目录以及任何
+                            vendors 目录包含在内。目前 grunt-contrib-jshint 还不能排除文件，只能包含它们。所以
+                            我们必须指定所有想要包含在内的文件。我一般会把想要包含的文件分成两个列表：真正
+                            构成应用程序或网站的 JavaScript，以及 QA JavaScript。它们都要去毛，但这样分开更容
+                            易管理一些。注意通配符 /**/ 的含义是“子目录中的所有文件”。尽管现在还没有 public/
+                            js 目录，但我们会有的。隐含着排除的是 node_modules 和 public/vendor 目录。</p>
+                        <p>最后，我们配置了 grunt-exec 插件，让它运行 LinkChecker。注意，我们把端口 3000 硬编
+                            码在这个插件的配置里了。这最好能参数化，我把这当作练习留给读者了
+                            1 。</p>
+                        <p>最后我们“注册”了这些任务：把单个的插件放到一个命名分组中。一个特定名称的任务
+                            default ，在你只是输入 grunt 后，就会默认运行。</p>
+                        <p>现在你只需确保服务器在（后台或另一个窗口中）运行着，然后运行 Grunt：</p>
+                        <pre class="code-para"><ol><li><span>grunt</span></li></ol></pre>
+                        <p>所有测试都会运行（除了页面测试），所有代码都会去毛，所有链接都会被检查！如果某
+                            个组件失效，Grunt 会给出错误消息并终止，否则它会报告“完成，没有错误”。没有什么
+                            比看到这条消息更让人满意的了，所以养成提交前运行 Grunt 的习惯吧！</p>
+                    </div>
+                </div>
+                <div class="section-box" id="catalog5-12">
+                    <h3 class="section-top">5.12　持续集成</h3>
+                    <div class="section-content">
+                        <p>我要向你介绍一个极其实用的 QA 概念：持续集成（CI）。如果你在团队中工作，它尤其
+                            重要，但即便你只是一个人在战斗，它也能为你提供一些不可或缺的纪律。基本上你每次
+                            向共享服务器贡献代码时，CI 都会运行部分或全部测试。如果所有测试都通过了，通常什
+                            么也不会发生（你可能会收到一封邮件说“干得好”，这取决于你是如何配置 CI 的）。另
+                            一方面，如果有测试失败了，后果一般是更加公开。这也是取决于你是如何配置 CI 的，
+                            但一般整个团队都会收到一封邮件说你“搞砸了构建”。如果你们的集成管理员是个虐待
+                            狂，有时老板也会出现在邮件列表中。我听说甚至有的团队会在有人搞砸构建时设置灯光和警报器，并且在一个特别有创造性的办公室，一个微型的机器人泡沫导弹发射装置会向
+                            犯错的开发人员发射泡沫塑料弹。它是一个提交前运行 QA 工具链的强力激励措施。</p>
+                        <p>CI 服务器的安装和配置超出了本书的范围，但如果不介绍它，这一章就不能算是完整
+                            的 QA 章节。目前 Node 中最流行的 CI 服务器是 Travis CI（http://about.travis-ci.org/docs/
+                            user/getting-started）。Travis CI 是一个托管的解决方案，非常有吸引力（省去了自己设置
+                            CI 服务器的麻烦）。如果你用 GitHub，它提供了卓越的集成支持。非常成熟的 CI 服务器
+                            Jenkins 现 在 也 有 Node 插 件（https://wiki.jenkins-ci.org/display/JENKINS/NodeJS+Plugin）。
+                            JetBrains 卓越的 TeamCity（http://www.jetbrains.com/teamcity/）现在也提供 Node 插件。</p>
+                        <p>如果你是独立做项目，CI 服务器对你的帮助可能不是特别大，但如果你在团队中工作，或
+                            在做一个开源项目，我强烈推荐给项目设置 CI。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="study-bottom">
+            <h4>Node与Express入门篇已完成，请进行<a href="/node-express2">下一阶段</a>的学习</h4>
+            <p>内容参考：《Node与Express开发》</p>
+            <p>Ethan Brown 著</p>
+            <p>吴海星 苏文 译</p>
+            <p>人民邮电出版社</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>
+
+{{#section 'study-page-js'}}
+    <script src="/javascripts/studyPage/study-page.js"></script>
+{{/section}}

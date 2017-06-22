@@ -1,0 +1,41 @@
+{{#section 'publish-page-css'}}
+        <link rel="stylesheet" href="/stylesheets/publishPage.css">
+{{/section}}
+
+<div class="publishPage-titlt">
+    <h2>内容发布</h2>
+</div>
+<section class="publishPage" ng-controller="publishController as ctrl">
+    <div class="publishBody">
+        <form class="publishForm" name="publishForm">
+            <div class="publish-title">
+                <label>标题：</label>
+                <input type="text" required ng-model="ctrl.article.articleTitle">
+            </div>
+            <div class="publish-type">
+                <label>类型：</label>
+                <input type="radio" name="type" value="文章" ng-model="ctrl.article.articleType"><span>文章</span>
+                <input type="radio" name="type" value="技术" ng-model="ctrl.article.articleType"><span>技术</span>
+                <input type="radio" name="type" value="问答" ng-model="ctrl.article.articleType"><span>问答</span>
+                <input type="radio" name="type" value="随记" ng-model="ctrl.article.articleType"><span>随记</span>
+            </div>
+            <div class="publish-content">
+                <label>内容：</label>
+                <textarea required checked ng-model="ctrl.article.articleContent"></textarea>
+            </div>
+            <div class="article-whoSee">
+                <label>可见人群：</label>
+                <input type="radio" name="whoSee" value="公开" ng-model="ctrl.article.whoSee"><span>公开</span>
+                <input type="radio" name="whoSee" value="关注可见" ng-model="ctrl.article.whoSee"><span>关注可见</span>
+                <input type="radio" name="whoSee" value="自己可见" ng-model="ctrl.article.whoSee"><span>自己可见</span>
+            </div>
+            <div class="publish-btn">
+                <button ng-click="ctrl.publish()"class="btn btn-default"  ng-disabled="publishForm.$invalid">发布</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+{{#section 'publish-page-js'}}
+    <script src="javascripts/publishPage.js"></script>
+{{/section}}
